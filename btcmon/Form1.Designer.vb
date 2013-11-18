@@ -56,12 +56,12 @@ Partial Class Form1
         Me.cmp2_btcchinacny = New System.Windows.Forms.ToolStripMenuItem()
         Me.cm_panel2_close = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem16 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.p2_value = New System.Windows.Forms.Label()
         Me.rb_p2_alertonoff = New System.Windows.Forms.RadioButton()
         Me.p2_sell = New System.Windows.Forms.Label()
         Me.p2_buy = New System.Windows.Forms.Label()
         Me.p2_market = New System.Windows.Forms.Label()
         Me.p2_cur = New System.Windows.Forms.Label()
-        Me.p2_value = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Cm_panel3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem24 = New System.Windows.Forms.ToolStripMenuItem()
@@ -122,6 +122,7 @@ Partial Class Form1
         Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
         Me.alert_timer = New System.Windows.Forms.Timer(Me.components)
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.cm_panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -153,13 +154,13 @@ Partial Class Form1
         '
         Me.cm_panel1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarketToolStripMenuItem, Me.AlarmToolStripMenuItem})
         Me.cm_panel1.Name = "cm_panel1"
-        Me.cm_panel1.Size = New System.Drawing.Size(108, 48)
+        Me.cm_panel1.Size = New System.Drawing.Size(112, 48)
         '
         'MarketToolStripMenuItem
         '
         Me.MarketToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MTGOXToolStripMenuItem, Me.BitstampToolStripMenuItem, Me.BtcchinaToolStripMenuItem})
         Me.MarketToolStripMenuItem.Name = "MarketToolStripMenuItem"
-        Me.MarketToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.MarketToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.MarketToolStripMenuItem.Text = "market"
         '
         'MTGOXToolStripMenuItem
@@ -216,7 +217,7 @@ Partial Class Form1
         'AlarmToolStripMenuItem
         '
         Me.AlarmToolStripMenuItem.Name = "AlarmToolStripMenuItem"
-        Me.AlarmToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.AlarmToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.AlarmToolStripMenuItem.Text = "alert"
         '
         'p1_alert_onoff
@@ -292,6 +293,7 @@ Partial Class Form1
         '
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.ContextMenuStrip = Me.cm_panel2
+        Me.Panel2.Controls.Add(Me.p2_value)
         Me.Panel2.Controls.Add(Me.rb_p2_alertonoff)
         Me.Panel2.Controls.Add(Me.p2_sell)
         Me.Panel2.Controls.Add(Me.p2_buy)
@@ -306,13 +308,13 @@ Partial Class Form1
         '
         Me.cm_panel2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem8, Me.cm_panel2_close, Me.ToolStripMenuItem16})
         Me.cm_panel2.Name = "cm_panel1"
-        Me.cm_panel2.Size = New System.Drawing.Size(128, 70)
+        Me.cm_panel2.Size = New System.Drawing.Size(134, 70)
         '
         'ToolStripMenuItem8
         '
         Me.ToolStripMenuItem8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.ToolStripMenuItem13, Me.BtcchinaToolStripMenuItem1})
         Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(133, 22)
         Me.ToolStripMenuItem8.Text = "market"
         '
         'ToolStripMenuItem9
@@ -369,14 +371,26 @@ Partial Class Form1
         'cm_panel2_close
         '
         Me.cm_panel2_close.Name = "cm_panel2_close"
-        Me.cm_panel2_close.Size = New System.Drawing.Size(127, 22)
+        Me.cm_panel2_close.Size = New System.Drawing.Size(133, 22)
         Me.cm_panel2_close.Text = "close panel"
         '
         'ToolStripMenuItem16
         '
         Me.ToolStripMenuItem16.Name = "ToolStripMenuItem16"
-        Me.ToolStripMenuItem16.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem16.Size = New System.Drawing.Size(133, 22)
         Me.ToolStripMenuItem16.Text = "alert"
+        '
+        'p2_value
+        '
+        Me.p2_value.AutoSize = True
+        Me.p2_value.BackColor = System.Drawing.Color.Black
+        Me.p2_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_value.ForeColor = System.Drawing.Color.Lime
+        Me.p2_value.Location = New System.Drawing.Point(3, 27)
+        Me.p2_value.Name = "p2_value"
+        Me.p2_value.Size = New System.Drawing.Size(37, 29)
+        Me.p2_value.TabIndex = 0
+        Me.p2_value.Text = "---"
         '
         'rb_p2_alertonoff
         '
@@ -430,16 +444,6 @@ Partial Class Form1
         Me.p2_cur.TabIndex = 1
         Me.p2_cur.Text = "---"
         '
-        'p2_value
-        '
-        Me.p2_value.AutoSize = True
-        Me.p2_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_value.ForeColor = System.Drawing.Color.Lime
-        Me.p2_value.Location = New System.Drawing.Point(228, 62)
-        Me.p2_value.Name = "p2_value"
-        Me.p2_value.Size = New System.Drawing.Size(0, 29)
-        Me.p2_value.TabIndex = 0
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
@@ -459,13 +463,13 @@ Partial Class Form1
         '
         Me.Cm_panel3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem24, Me.cm_panel3_close, Me.ToolStripMenuItem32})
         Me.Cm_panel3.Name = "cm_panel1"
-        Me.Cm_panel3.Size = New System.Drawing.Size(128, 70)
+        Me.Cm_panel3.Size = New System.Drawing.Size(134, 70)
         '
         'ToolStripMenuItem24
         '
         Me.ToolStripMenuItem24.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem25, Me.ToolStripMenuItem29, Me.BtcchinaToolStripMenuItem2})
         Me.ToolStripMenuItem24.Name = "ToolStripMenuItem24"
-        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(133, 22)
         Me.ToolStripMenuItem24.Text = "market"
         '
         'ToolStripMenuItem25
@@ -522,13 +526,13 @@ Partial Class Form1
         'cm_panel3_close
         '
         Me.cm_panel3_close.Name = "cm_panel3_close"
-        Me.cm_panel3_close.Size = New System.Drawing.Size(127, 22)
+        Me.cm_panel3_close.Size = New System.Drawing.Size(133, 22)
         Me.cm_panel3_close.Text = "close panel"
         '
         'ToolStripMenuItem32
         '
         Me.ToolStripMenuItem32.Name = "ToolStripMenuItem32"
-        Me.ToolStripMenuItem32.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem32.Size = New System.Drawing.Size(133, 22)
         Me.ToolStripMenuItem32.Text = "alert"
         '
         'rb_p3_alertonoff
@@ -596,14 +600,14 @@ Partial Class Form1
         '
         'cm_main
         '
-        Me.cm_main.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPanelToolStripMenuItem, Me.MinimizeInTaskbarToolStripMenuItem, Me.PermamentToolStripMenuItem, Me.OpacityToolStripMenuItem, Me.LayoutToolStripMenuItem, Me.CloseToolStripMenuItem})
+        Me.cm_main.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPanelToolStripMenuItem, Me.MinimizeInTaskbarToolStripMenuItem, Me.PermamentToolStripMenuItem, Me.OpacityToolStripMenuItem, Me.LayoutToolStripMenuItem, Me.CloseToolStripMenuItem, Me.InfoToolStripMenuItem})
         Me.cm_main.Name = "cm_main"
-        Me.cm_main.Size = New System.Drawing.Size(176, 136)
+        Me.cm_main.Size = New System.Drawing.Size(176, 180)
         '
         'AddPanelToolStripMenuItem
         '
         Me.AddPanelToolStripMenuItem.Name = "AddPanelToolStripMenuItem"
-        Me.AddPanelToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AddPanelToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.AddPanelToolStripMenuItem.Text = "Add panel"
         '
         'MinimizeInTaskbarToolStripMenuItem
@@ -616,7 +620,7 @@ Partial Class Form1
         '
         Me.PermamentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YesToolStripMenuItem, Me.NoToolStripMenuItem})
         Me.PermamentToolStripMenuItem.Name = "PermamentToolStripMenuItem"
-        Me.PermamentToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PermamentToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.PermamentToolStripMenuItem.Text = "permament"
         '
         'YesToolStripMenuItem
@@ -635,7 +639,7 @@ Partial Class Form1
         '
         Me.OpacityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6})
         Me.OpacityToolStripMenuItem.Name = "OpacityToolStripMenuItem"
-        Me.OpacityToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.OpacityToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.OpacityToolStripMenuItem.Text = "opacity"
         '
         'ToolStripMenuItem2
@@ -672,7 +676,7 @@ Partial Class Form1
         '
         Me.LayoutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cm_main_4x1, Me.cm_main_1x4, Me.cm_main_2x2})
         Me.LayoutToolStripMenuItem.Name = "LayoutToolStripMenuItem"
-        Me.LayoutToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.LayoutToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.LayoutToolStripMenuItem.Text = "Layout"
         '
         'cm_main_4x1
@@ -696,7 +700,7 @@ Partial Class Form1
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ToolTip1
@@ -727,13 +731,13 @@ Partial Class Form1
         '
         Me.cm_panel4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.cm_panel4_close, Me.cmp4_alarm})
         Me.cm_panel4.Name = "cm_panel1"
-        Me.cm_panel4.Size = New System.Drawing.Size(128, 70)
+        Me.cm_panel4.Size = New System.Drawing.Size(134, 70)
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem7, Me.ToolStripMenuItem19, Me.ToolStripMenuItem21})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(127, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(133, 22)
         Me.ToolStripMenuItem1.Text = "market"
         '
         'ToolStripMenuItem7
@@ -790,13 +794,13 @@ Partial Class Form1
         'cm_panel4_close
         '
         Me.cm_panel4_close.Name = "cm_panel4_close"
-        Me.cm_panel4_close.Size = New System.Drawing.Size(127, 22)
+        Me.cm_panel4_close.Size = New System.Drawing.Size(133, 22)
         Me.cm_panel4_close.Text = "close panel"
         '
         'cmp4_alarm
         '
         Me.cmp4_alarm.Name = "cmp4_alarm"
-        Me.cmp4_alarm.Size = New System.Drawing.Size(127, 22)
+        Me.cmp4_alarm.Size = New System.Drawing.Size(133, 22)
         Me.cmp4_alarm.Text = "alert"
         '
         'rb_p4_alertonoff
@@ -873,6 +877,12 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "btcmon"
         Me.NotifyIcon1.Visible = True
         '
+        'InfoToolStripMenuItem
+        '
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.InfoToolStripMenuItem.Text = "Info"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -884,7 +894,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.p2_value)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -907,7 +916,6 @@ Partial Class Form1
         Me.Panel4.PerformLayout()
         Me.cm_panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -1008,5 +1016,6 @@ Partial Class Form1
     Friend WithEvents ToolTip3 As System.Windows.Forms.ToolTip
     Friend WithEvents alert_timer As System.Windows.Forms.Timer
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
+    Friend WithEvents InfoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

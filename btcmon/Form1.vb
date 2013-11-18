@@ -1097,4 +1097,9 @@ p5:
 
         Me.Activate()
     End Sub
+
+    Private Sub InfoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InfoToolStripMenuItem.Click
+        AboutBox1.ShowDialog()
+
+    End Sub
 End Class
