@@ -1,10 +1,7 @@
 ﻿Imports System.Net.WebClient
 
 Public Class Form1
-    Dim p1 As New panel
-    Dim p2 As New panel
-    Dim p3 As New panel
-    Dim p4 As New panel
+   
     Dim mtgox As New st_mtgox
     Dim bitstamp As New st_bitstamp
     Dim btcchina As New st_btcchina
@@ -21,6 +18,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         My.Computer.Registry.CurrentUser.CreateSubKey("Software\btcmon")
         p1.market = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_market", "")
         p2.market = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_market", "")
@@ -53,7 +51,40 @@ Public Class Form1
         p3.col = Int(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_col", "3"))
         p4.col = Int(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_col", "4"))
         align = Int(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "align", "0"))
+        p1.alert_1_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_val1", 0)
+        p1.alert_2_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_val2", 0)
+        p1.alert_1_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_ar1", 0)
+        p1.alert_2_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_ar2", 0)
+        p1.alert_or = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_or", 0)
+        p1.alert_set = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_set", 0)
+        If p1.alert_set Then p1_alert_onoff.BackColor = Color.Red
 
+        p2.alert_1_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_val1", 0)
+        p2.alert_2_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_val2", 0)
+        p2.alert_1_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_ar1", 0)
+        p2.alert_2_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_ar2", 0)
+        p2.alert_or = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_or", 0)
+        p2.alert_set = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_set", 0)
+        If p2.alert_set Then rb_p2_alertonoff.BackColor = Color.Red
+
+        p3.alert_1_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_val1", 0)
+        p3.alert_2_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_val2", 0)
+        p3.alert_1_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_ar1", 0)
+        p3.alert_2_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_ar2", 0)
+        p3.alert_or = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_or", 0)
+        p3.alert_set = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_set", 0)
+        If p3.alert_set Then rb_p3_alertonoff.BackColor = Color.Red
+        p4.alert_1_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_val1", 0)
+        p4.alert_2_val = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_val2", 0)
+        p4.alert_1_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_ar1", 0)
+        p4.alert_2_ar = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_ar2", 0)
+        p4.alert_or = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_or", 0)
+        p4.alert_set = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_set", 0)
+        If p4.alert_set Then rb_p4_alertonoff.BackColor = Color.Red
+        NotifyIcon1.Visible = False
+
+        p1.alert = 0
+       
         main_redraw()
 
     End Sub
@@ -152,6 +183,7 @@ Public Class Form1
             p1.last_value = p1.value
             p1_update()
         End If
+        alert_chk(1)
 
         If p2.enable = True Then
 
@@ -203,7 +235,7 @@ Public Class Form1
                 p2.last_value = p2.value
                 p2_update()
             End If
-
+            alert_chk(2)
         End If
 
 
@@ -255,6 +287,7 @@ Public Class Form1
                 p3.last_value = p3.value
                 p3_update()
             End If
+            alert_chk(3)
         End If
         If p4.enable = True Then
 
@@ -304,6 +337,7 @@ Public Class Form1
                 p4.last_value = p4.value
                 p4_update()
             End If
+            alert_chk(4)
         End If
     End Sub
     Private Sub bitstamp_get(ByVal url As String)
@@ -418,6 +452,8 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "EUR")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
+
     End Sub
 
     Private Sub USDToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles USDToolStripMenuItem.Click
@@ -428,6 +464,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
     End Sub
 
     Private Sub GBPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GBPToolStripMenuItem.Click
@@ -438,6 +475,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "GBP")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
     End Sub
 
     Private Sub USDToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles USDToolStripMenuItem1.Click
@@ -448,6 +486,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
     End Sub
     Private Function GetUnixTimestamp(ByVal currDate As DateTime) As Double
         'create Timespan by subtracting the value provided from the Unix Epoch
@@ -466,6 +505,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "CNY")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
     End Sub
 
     Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
@@ -618,6 +658,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "EUR")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(4)
     End Sub
 
     Private Sub cmp4_mtgoxusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp4_mtgoxusd.Click
@@ -628,6 +669,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(4)
     End Sub
 
     Private Sub cmp4_mtgoxgbp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp4_mtgoxgbp.Click
@@ -638,6 +680,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "GBP")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(4)
     End Sub
 
     Private Sub cmp4_bitstampusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp4_bitstampusd.Click
@@ -648,6 +691,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(4)
 
     End Sub
 
@@ -659,6 +703,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "CNY")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(4)
 
     End Sub
 
@@ -671,6 +716,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "CNY")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(3)
     End Sub
 
     Private Sub cmp3_bitstampusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_bitstampusd.Click
@@ -681,6 +727,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(3)
     End Sub
 
     Private Sub cmp3_mtgoxeur_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_mtgoxeur.Click
@@ -691,6 +738,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "EUR")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(3)
     End Sub
 
     Private Sub cmp3_mtgoxusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_mtgoxusd.Click
@@ -701,6 +749,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(3)
     End Sub
 
     Private Sub cmp3_mtgoxgbp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_mtgoxgbp.Click
@@ -711,6 +760,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "GBP")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(3)
     End Sub
 
     Private Sub cmp2_btcchinacny_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_btcchinacny.Click
@@ -721,6 +771,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "CNY")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(2)
     End Sub
 
     Private Sub cmp2_bitstampusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_bitstampusd.Click
@@ -731,6 +782,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(2)
     End Sub
 
     Private Sub cmp2_mtgoxeur_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_mtgoxeur.Click
@@ -741,6 +793,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "EUR")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(2)
     End Sub
 
     Private Sub cmp2_mtgoxusd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_mtgoxusd.Click
@@ -751,6 +804,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "USD")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(2)
     End Sub
 
     Private Sub cmp2_mtgoxgbp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_mtgoxgbp.Click
@@ -761,6 +815,7 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "GBP")
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(2)
     End Sub
 
     Private Sub cm_panel3_close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cm_panel3_close.Click
@@ -846,4 +901,200 @@ Public Class Form1
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "align", align)
     End Sub
 
+    Private Sub AlarmToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AlarmToolStripMenuItem.Click
+        ALERT_PANEL = 1
+        Form2.ShowDialog()
+
+
+    End Sub
+
+    Private Sub ToolStripMenuItem16_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripMenuItem16.Click
+        ALERT_PANEL = 2
+        Form2.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripMenuItem32_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripMenuItem32.Click
+        ALERT_PANEL = 3
+        Form2.ShowDialog()
+    End Sub
+
+    Private Sub cmp4_alarm_Click(sender As System.Object, e As System.EventArgs) Handles cmp4_alarm.Click
+        ALERT_PANEL = 4
+        Form2.ShowDialog()
+    End Sub
+    Private Sub alert_off(ByVal panel As Integer)
+        If panel = 1 Then
+            p1.alert_set = False
+            p1_alert_onoff.BackColor = Color.Black
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_set", p1.alert_set)
+        End If
+        If panel = 2 Then
+            p2.alert_set = False
+            rb_p2_alertonoff.BackColor = Color.Black
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_set", p2.alert_set)
+        End If
+        If panel = 3 Then
+            p3.alert_set = False
+            rb_p3_alertonoff.BackColor = Color.Black
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_set", p3.alert_set)
+        End If
+        If panel = 4 Then
+            p4.alert_set = False
+            rb_p4_alertonoff.BackColor = Color.Black
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_set", p4.alert_set)
+        End If
+    End Sub
+
+    Private Sub alert_timer_Tick(sender As System.Object, e As System.EventArgs) Handles alert_timer.Tick
+        If p1.alert = 1 Then
+            Panel1.BackColor = Color.Red
+            p1.alert = 2
+            GoTo p2
+        End If
+        If p1.alert = 2 Then
+            Panel1.BackColor = Color.Black
+            p1.alert = 1
+        End If
+        If p1.alert = 0 Then
+            Panel1.BackColor = Color.Black
+        End If
+p2:
+        If p2.alert = 1 Then
+            Panel2.BackColor = Color.Red
+            p2.alert = 2
+            GoTo p3
+        End If
+        If p2.alert = 2 Then
+            Panel2.BackColor = Color.Black
+            p2.alert = 1
+        End If
+p3:
+        If p3.alert = 1 Then
+            Panel3.BackColor = Color.Red
+            p3.alert = 2
+            GoTo p4
+        End If
+        If p3.alert = 2 Then
+            Panel3.BackColor = Color.Black
+            p3.alert = 1
+        End If
+p4:
+        If p4.alert = 1 Then
+            Panel4.BackColor = Color.Red
+            p4.alert = 2
+            GoTo p5
+        End If
+        If p4.alert = 2 Then
+            Panel4.BackColor = Color.Black
+            p4.alert = 1
+        End If
+p5:
+
+    End Sub
+    Private Sub alert_chk(ByVal panel As Integer)
+        If panel = 1 And p1.alert_set Then
+            If p1.alert_1_ar = 0 Then '>=
+                If p1.value >= p1.alert_1_val Then p1.alert = 1 Else p1.alert = 0
+            Else
+                If p1.alert_1_ar = 1 Then '<=
+                    If p1.value <= p1.alert_1_val Then p1.alert = 1 Else p1.alert = 0
+                End If
+            End If
+            If p1.alert_or Then
+                If p1.alert_2_ar = 0 Then '>=
+                    If p1.value >= p1.alert_2_val Then p1.alert = 1
+                Else
+                    If p1.alert_2_ar = 1 Then '<=
+                        If p1.value <= p1.alert_2_val Then p1.alert = 1
+                    End If
+                End If
+            End If
+        End If
+
+        If panel = 2 And p2.alert_set Then
+            If p2.alert_1_ar = 0 Then '>=
+                If p2.value >= p2.alert_1_val Then p2.alert = 1 Else p2.alert = 0
+            Else
+                If p2.alert_1_ar = 1 Then '<=
+                    If p2.value <= p2.alert_1_val Then p2.alert = 1 Else p2.alert = 0
+                End If
+            End If
+            If p2.alert_or Then
+                If p2.alert_2_ar = 0 Then '>=
+                    If p2.value >= p2.alert_2_val Then p2.alert = 1
+                Else
+                    If p2.alert_2_ar = 1 Then '<=
+                        If p2.value <= p2.alert_2_val Then p2.alert = 1
+                    End If
+                End If
+            End If
+        End If
+
+        If panel = 3 And p3.alert_set Then
+            If p3.alert_1_ar = 0 Then '>=
+                If p3.value >= p3.alert_1_val Then p3.alert = 1 Else p3.alert = 0
+            Else
+                If p3.alert_1_ar = 1 Then '<=
+                    If p3.value <= p3.alert_1_val Then p3.alert = 1 Else p3.alert = 0
+                End If
+            End If
+            If p3.alert_or Then
+                If p3.alert_2_ar = 0 Then '>=
+                    If p3.value >= p3.alert_2_val Then p3.alert = 1
+                Else
+                    If p3.alert_2_ar = 1 Then '<=
+                        If p3.value <= p3.alert_2_val Then p3.alert = 1
+                    End If
+                End If
+            End If
+        End If
+        If panel = 4 And p4.alert_set Then
+            If p4.alert_1_ar = 0 Then '>=
+                If p4.value >= p4.alert_1_val Then p4.alert = 1 Else p4.alert = 0
+            Else
+                If p4.alert_1_ar = 1 Then '<=
+                    If p4.value <= p4.alert_1_val Then p4.alert = 1 Else p4.alert = 0
+                End If
+            End If
+            If p4.alert_or Then
+                If p4.alert_2_ar = 0 Then '>=
+                    If p4.value >= p4.alert_2_val Then p4.alert = 1
+                Else
+                    If p4.alert_2_ar = 1 Then '<=
+                        If p4.value <= p4.alert_2_val Then p4.alert = 1
+                    End If
+                End If
+            End If
+        End If
+
+        If p1.alert <> 0 Or p2.alert <> 0 Or p3.alert <> 0 Or p4.alert <> 0 Then
+            Me.Opacity = 1
+            Me.TopMost = True
+            Me.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub MinimizeInTaskbarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeInTaskbarToolStripMenuItem.Click
+        Me.NotifyIcon1.Visible = True
+
+        'Me.WindowState = FormWindowState.Minimized
+        Me.Visible = False
+
+    End Sub
+
+    Private Sub Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub NotifyIcon1_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+        If (FormWindowState.Minimized) Then
+            'Me.WindowState = FormWindowState.Normal
+            Me.Visible = True
+        End If
+
+
+
+        Me.Activate()
+    End Sub
 End Class
