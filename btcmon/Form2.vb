@@ -147,21 +147,25 @@
             p1.alert_set = False
             Form1.p1_alert_onoff.BackColor = Color.Black
             p1.alert = 0
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_alert_set", p1.alert_set)
         End If
         If ALERT_PANEL = 2 Then
             p2.alert_set = False
             Form1.rb_p2_alertonoff.BackColor = Color.Black
             p2.alert = 0
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_alert_set", p2.alert_set)
         End If
         If ALERT_PANEL = 3 Then
             p3.alert_set = False
             Form1.rb_p3_alertonoff.BackColor = Color.Black
             p3.alert = 0
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_alert_set", p3.alert_set)
         End If
         If ALERT_PANEL = 4 Then
             p4.alert_set = False
             Form1.rb_p4_alertonoff.BackColor = Color.Black
             p4.alert = 0
+            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_alert_set", p4.alert_set)
         End If
 
     End Sub

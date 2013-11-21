@@ -5,6 +5,7 @@ Public Class Form1
     Dim mtgox As New st_mtgox
     Dim bitstamp As New st_bitstamp
     Dim btcchina As New st_btcchina
+    Dim btce As New st_btce
     Dim dragme As Boolean
     Dim dragpos(1) As Integer
     Dim mainwidth As Integer
@@ -14,6 +15,10 @@ Public Class Form1
     Dim url_mtgoxgbp As String = "http://data.mtgox.com/api/1/BTCGBP/ticker_fast"
     Dim url_bitstampusd As String = "https://www.bitstamp.net/api/ticker/"
     Dim url_btcchinacny As String = "https://vip.btcchina.com/bc/ticker"
+    Dim url_btceusd As String = "https://btc-e.com/api/2/btc_usd/ticker"
+    Dim url_btceur As String = "https://btc-e.com/api/2/btc_eur/ticker"
+
+
     Dim align As Integer = 0 '0=4x1  1=1x4 2=2x2
 
 
@@ -83,8 +88,6 @@ Public Class Form1
         If p4.alert_set Then rb_p4_alertonoff.BackColor = Color.Red
         NotifyIcon1.Visible = False
 
-        p1.alert = 0
-       
         main_redraw()
 
     End Sub
@@ -133,6 +136,7 @@ Public Class Form1
 
         Dim a, b As Double
         Dim c, d As Double
+        Dim z, pos As Integer
         If p1.market = "mtgox" Then
             mtgox_get(p1.url)
             If mtgox.result = "success" Then
@@ -183,6 +187,32 @@ Public Class Form1
             p1.last_value = p1.value
             p1_update()
         End If
+        If p1.market = "BTC-E" Then
+            btce_get(p1.url)
+            If Len(btce.sell) > 7 Then p1.sell = Mid(btce.sell, 1, 7) Else p1.sell = btce.sell
+            If Len(btce.buy) > 7 Then p1.buy = Mid(btce.buy, 1, 7) Else p1.buy = btce.buy
+            p1.time = btce.now
+            z = 1
+            For z = 1 To Len(btce.last)
+                If Mid(btce.last, z, 1) = "." Then pos = z
+            Next
+            If pos > 0 Then
+                a = Int(Mid(btce.last, 1, pos - 1))
+                If Len(btce.last) - pos > 1 Then
+                    b = Int(Mid(btce.last, pos + 1, 2))
+                Else
+                    b = Int(Mid(btce.last, pos + 1, 1))
+                End If
+                b = b / 100
+                p1.value = a + b
+            Else
+                p1.value = Int(btce.last)
+            End If
+            If p1.value > p1.last_value Then p1.trend = "up"
+                If p1.value < p1.last_value Then p1.trend = "down"
+                p1.last_value = p1.value
+                p1_update()
+            End If
         alert_chk(1)
 
         If p2.enable = True Then
@@ -235,6 +265,34 @@ Public Class Form1
                 p2.last_value = p2.value
                 p2_update()
             End If
+            If p2.market = "BTC-E" Then
+                pos = 0
+                btce_get(p2.url)
+                If Len(btce.sell) > 7 Then p2.sell = Mid(btce.sell, 1, 7) Else p2.sell = btce.sell
+                If Len(btce.buy) > 7 Then p2.buy = Mid(btce.buy, 1, 7) Else p2.buy = btce.buy
+                p2.time = btce.now
+                z = 1
+                For z = 1 To Len(btce.last)
+                    If Mid(btce.last, z, 1) = "." Then pos = z
+                Next
+                If pos > 0 Then
+                    a = Int(Mid(btce.last, 1, pos - 1))
+                    If Len(btce.last) - pos > 1 Then
+                        b = Int(Mid(btce.last, pos + 1, 2))
+                    Else
+                        b = Int(Mid(btce.last, pos + 1, 1))
+                    End If
+                    b = b / 100
+                    p2.value = a + b
+                Else
+                    p2.value = Int(btce.last)
+                End If
+                If p2.value > p2.last_value Then p2.trend = "up"
+                If p2.value < p2.last_value Then p2.trend = "down"
+                p2.last_value = p2.value
+                p2_update()
+            End If
+
             alert_chk(2)
         End If
 
@@ -282,6 +340,33 @@ Public Class Form1
                 b = Int(Mid(btcchina.last, Len(btcchina.last) - 1, 2))
                 b = b / 100
                 p3.value = a + b
+                If p3.value > p3.last_value Then p3.trend = "up"
+                If p3.value < p3.last_value Then p3.trend = "down"
+                p3.last_value = p3.value
+                p3_update()
+            End If
+            If p3.market = "BTC-E" Then
+                pos = 0
+                btce_get(p3.url)
+                If Len(btce.sell) > 7 Then p3.sell = Mid(btce.sell, 1, 7) Else p3.sell = btce.sell
+                If Len(btce.buy) > 7 Then p3.buy = Mid(btce.buy, 1, 7) Else p3.buy = btce.buy
+                p3.time = btce.now
+                z = 1
+                For z = 1 To Len(btce.last)
+                    If Mid(btce.last, z, 1) = "." Then pos = z
+                Next
+                If pos > 0 Then
+                    a = Int(Mid(btce.last, 1, pos - 1))
+                    If Len(btce.last) - pos > 1 Then
+                        b = Int(Mid(btce.last, pos + 1, 2))
+                    Else
+                        b = Int(Mid(btce.last, pos + 1, 1))
+                    End If
+                    b = b / 100
+                    p3.value = a + b
+                Else
+                    p3.value = Int(btce.last)
+                End If
                 If p3.value > p3.last_value Then p3.trend = "up"
                 If p3.value < p3.last_value Then p3.trend = "down"
                 p3.last_value = p3.value
@@ -337,6 +422,33 @@ Public Class Form1
                 p4.last_value = p4.value
                 p4_update()
             End If
+            If p4.market = "BTC-E" Then
+                pos = 0
+                btce_get(p4.url)
+                If Len(btce.sell) > 7 Then p4.sell = Mid(btce.sell, 1, 7) Else p4.sell = btce.sell
+                If Len(btce.buy) > 7 Then p4.buy = Mid(btce.buy, 1, 7) Else p4.buy = btce.buy
+                p4.time = btce.now
+                z = 1
+                For z = 1 To Len(btce.last)
+                    If Mid(btce.last, z, 1) = "." Then pos = z
+                Next
+                If pos > 0 Then
+                    a = Int(Mid(btce.last, 1, pos - 1))
+                    If Len(btce.last) - pos > 1 Then
+                        b = Int(Mid(btce.last, pos + 1, 2))
+                    Else
+                        b = Int(Mid(btce.last, pos + 1, 1))
+                    End If
+                    b = b / 100
+                    p4.value = a + b
+                Else
+                    p4.value = Int(btce.last)
+                End If
+                If p4.value > p4.last_value Then p4.trend = "up"
+                If p4.value < p4.last_value Then p4.trend = "down"
+                p4.last_value = p4.value
+                p4_update()
+            End If
             alert_chk(4)
         End If
     End Sub
@@ -376,6 +488,26 @@ Public Class Form1
                 If a = 5 Then mtgox.last_local = s
                 If a = 49 Then mtgox.buy = Mid(s, 1, Len(s) - 3)
                 If a = 60 Then mtgox.sell = Mid(s, 1, Len(s) - 3)
+                a = a + 1
+            Next
+        Catch ex As Exception
+        End Try
+    End Sub
+    Private Sub btce_get(ByVal url As String)
+
+        Try
+            Dim client As System.Net.WebClient = New System.Net.WebClient()
+            Dim reply As String = client.DownloadString(url)
+            Dim st() As String
+            Dim a As Integer
+            Dim stringSeparators() As String = {":", ","}
+            st = reply.Split(stringSeparators, StringSplitOptions.None)
+            For Each s As String In st
+                's = Mid(s, 2, Len(s) - 2)
+
+                If a = 12 Then btce.last = s
+                If a = 14 Then btce.buy = s
+                If a = 16 Then btce.sell = s
                 a = a + 1
             Next
         Catch ex As Exception
@@ -1101,5 +1233,95 @@ p5:
     Private Sub InfoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InfoToolStripMenuItem.Click
         AboutBox1.ShowDialog()
 
+    End Sub
+
+   
+
+    Private Sub EURToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles EURToolStripMenuItem1.Click
+        p1.currency = "EUR"
+        p1.market = "BTC-E"
+        p1.url = url_btceur
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "EUR")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub USDToolStripMenuItem2_Click(sender As System.Object, e As System.EventArgs) Handles USDToolStripMenuItem2.Click
+        p1.currency = "USD"
+        p1.market = "BTC-E"
+        p1.url = url_btceusd
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_cur", "USD")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_url", p1.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p1_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub USDToolStripMenuItem3_Click(sender As System.Object, e As System.EventArgs) Handles USDToolStripMenuItem3.Click
+        p2.currency = "USD"
+        p2.market = "BTC-E"
+        p2.url = url_btceusd
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "USD")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub EURToolStripMenuItem2_Click(sender As System.Object, e As System.EventArgs) Handles EURToolStripMenuItem2.Click
+        p2.currency = "EUR"
+        p2.market = "BTC-E"
+        p2.url = url_btceur
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_cur", "EUR")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_url", p2.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p2_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub USDToolStripMenuItem4_Click(sender As System.Object, e As System.EventArgs) Handles USDToolStripMenuItem4.Click
+        p3.currency = "USD"
+        p3.market = "BTC-E"
+        p3.url = url_btceusd
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "USD")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub EURToolStripMenuItem3_Click(sender As System.Object, e As System.EventArgs) Handles EURToolStripMenuItem3.Click
+        p3.currency = "EUR"
+        p3.market = "BTC-E"
+        p3.url = url_btceur
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_cur", "EUR")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_url", p3.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p3_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub USDToolStripMenuItem5_Click(sender As System.Object, e As System.EventArgs) Handles USDToolStripMenuItem5.Click
+        p4.currency = "USD"
+        p4.market = "BTC-E"
+        p4.url = url_btceusd
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "USD")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(1)
+    End Sub
+
+    Private Sub EURToolStripMenuItem4_Click(sender As System.Object, e As System.EventArgs) Handles EURToolStripMenuItem4.Click
+        p4.currency = "EUR"
+        p4.market = "BTC-E"
+        p4.url = url_btceur
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_market", "BTC-E")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_cur", "EUR")
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_url", p4.url)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\btcmon", "p4_enable", "1")
+        alert_off(1)
     End Sub
 End Class

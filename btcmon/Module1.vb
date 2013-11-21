@@ -40,6 +40,12 @@
         Public buy As String
         Public sell As String
     End Structure
+    Public Structure st_btce
+        Public last As String
+        Public buy As String
+        Public sell As String
+        Public now As String
+    End Structure
     Public ALERT_PANEL As Integer
     Public p1 As New panel
     Public p2 As New panel

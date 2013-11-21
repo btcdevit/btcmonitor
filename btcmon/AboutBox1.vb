@@ -22,4 +22,8 @@
     Private Sub LabelCopyright_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelCopyright.Click
 
     End Sub
+
+    Private Sub LabelVersion_Click(sender As System.Object, e As System.EventArgs) Handles LabelVersion.Click
+
+    End Sub
 End Class

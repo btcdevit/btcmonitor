@@ -98,6 +98,7 @@ Partial Class Form1
         Me.cm_main_1x4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.cm_main_2x2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -122,7 +123,18 @@ Partial Class Form1
         Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
         Me.alert_timer = New System.Windows.Forms.Timer(Me.components)
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.USDToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EURToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtceToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.USDToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EURToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtceToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.USDToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EURToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtceToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.USDToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EURToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.cm_panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -154,70 +166,70 @@ Partial Class Form1
         '
         Me.cm_panel1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarketToolStripMenuItem, Me.AlarmToolStripMenuItem})
         Me.cm_panel1.Name = "cm_panel1"
-        Me.cm_panel1.Size = New System.Drawing.Size(112, 48)
+        Me.cm_panel1.Size = New System.Drawing.Size(108, 48)
         '
         'MarketToolStripMenuItem
         '
-        Me.MarketToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MTGOXToolStripMenuItem, Me.BitstampToolStripMenuItem, Me.BtcchinaToolStripMenuItem})
+        Me.MarketToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MTGOXToolStripMenuItem, Me.BitstampToolStripMenuItem, Me.BtcchinaToolStripMenuItem, Me.BtceToolStripMenuItem})
         Me.MarketToolStripMenuItem.Name = "MarketToolStripMenuItem"
-        Me.MarketToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
+        Me.MarketToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MarketToolStripMenuItem.Text = "market"
         '
         'MTGOXToolStripMenuItem
         '
         Me.MTGOXToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EURToolStripMenuItem, Me.USDToolStripMenuItem, Me.GBPToolStripMenuItem})
         Me.MTGOXToolStripMenuItem.Name = "MTGOXToolStripMenuItem"
-        Me.MTGOXToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.MTGOXToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MTGOXToolStripMenuItem.Text = "MTGOX"
         '
         'EURToolStripMenuItem
         '
         Me.EURToolStripMenuItem.Name = "EURToolStripMenuItem"
-        Me.EURToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.EURToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.EURToolStripMenuItem.Text = "EUR"
         '
         'USDToolStripMenuItem
         '
         Me.USDToolStripMenuItem.Name = "USDToolStripMenuItem"
-        Me.USDToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.USDToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.USDToolStripMenuItem.Text = "USD"
         '
         'GBPToolStripMenuItem
         '
         Me.GBPToolStripMenuItem.Name = "GBPToolStripMenuItem"
-        Me.GBPToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.GBPToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.GBPToolStripMenuItem.Text = "GBP"
         '
         'BitstampToolStripMenuItem
         '
         Me.BitstampToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USDToolStripMenuItem1})
         Me.BitstampToolStripMenuItem.Name = "BitstampToolStripMenuItem"
-        Me.BitstampToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.BitstampToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BitstampToolStripMenuItem.Text = "bitstamp"
         '
         'USDToolStripMenuItem1
         '
         Me.USDToolStripMenuItem1.Name = "USDToolStripMenuItem1"
-        Me.USDToolStripMenuItem1.Size = New System.Drawing.Size(96, 22)
+        Me.USDToolStripMenuItem1.Size = New System.Drawing.Size(94, 22)
         Me.USDToolStripMenuItem1.Text = "USD"
         '
         'BtcchinaToolStripMenuItem
         '
         Me.BtcchinaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CNYToolStripMenuItem})
         Me.BtcchinaToolStripMenuItem.Name = "BtcchinaToolStripMenuItem"
-        Me.BtcchinaToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.BtcchinaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BtcchinaToolStripMenuItem.Text = "btcchina"
         '
         'CNYToolStripMenuItem
         '
         Me.CNYToolStripMenuItem.Name = "CNYToolStripMenuItem"
-        Me.CNYToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.CNYToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.CNYToolStripMenuItem.Text = "CNY"
         '
         'AlarmToolStripMenuItem
         '
         Me.AlarmToolStripMenuItem.Name = "AlarmToolStripMenuItem"
-        Me.AlarmToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
+        Me.AlarmToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AlarmToolStripMenuItem.Text = "alert"
         '
         'p1_alert_onoff
@@ -236,20 +248,18 @@ Partial Class Form1
         '
         'p1_sell
         '
-        Me.p1_sell.AutoSize = True
         Me.p1_sell.ForeColor = System.Drawing.Color.White
-        Me.p1_sell.Location = New System.Drawing.Point(110, 55)
+        Me.p1_sell.Location = New System.Drawing.Point(100, 55)
         Me.p1_sell.Name = "p1_sell"
-        Me.p1_sell.Size = New System.Drawing.Size(0, 13)
+        Me.p1_sell.Size = New System.Drawing.Size(76, 13)
         Me.p1_sell.TabIndex = 4
         '
         'p1_buy
         '
-        Me.p1_buy.AutoSize = True
         Me.p1_buy.ForeColor = System.Drawing.Color.White
-        Me.p1_buy.Location = New System.Drawing.Point(20, 55)
+        Me.p1_buy.Location = New System.Drawing.Point(10, 57)
         Me.p1_buy.Name = "p1_buy"
-        Me.p1_buy.Size = New System.Drawing.Size(0, 13)
+        Me.p1_buy.Size = New System.Drawing.Size(76, 13)
         Me.p1_buy.TabIndex = 3
         '
         'p1_market
@@ -264,25 +274,22 @@ Partial Class Form1
         '
         'p1_cur
         '
-        Me.p1_cur.AutoSize = True
         Me.p1_cur.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p1_cur.ForeColor = System.Drawing.Color.White
-        Me.p1_cur.Location = New System.Drawing.Point(116, 30)
+        Me.p1_cur.Location = New System.Drawing.Point(106, 29)
         Me.p1_cur.Name = "p1_cur"
-        Me.p1_cur.Size = New System.Drawing.Size(33, 25)
+        Me.p1_cur.Size = New System.Drawing.Size(59, 25)
         Me.p1_cur.TabIndex = 1
-        Me.p1_cur.Text = "---"
         '
         'p1_value
         '
-        Me.p1_value.AutoSize = True
         Me.p1_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p1_value.ForeColor = System.Drawing.Color.Lime
-        Me.p1_value.Location = New System.Drawing.Point(11, 26)
+        Me.p1_value.Location = New System.Drawing.Point(3, 26)
         Me.p1_value.Name = "p1_value"
-        Me.p1_value.Size = New System.Drawing.Size(37, 29)
+        Me.p1_value.Size = New System.Drawing.Size(111, 29)
         Me.p1_value.TabIndex = 0
-        Me.p1_value.Text = "---"
+        Me.p1_value.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'p1timer
         '
@@ -308,89 +315,88 @@ Partial Class Form1
         '
         Me.cm_panel2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem8, Me.cm_panel2_close, Me.ToolStripMenuItem16})
         Me.cm_panel2.Name = "cm_panel1"
-        Me.cm_panel2.Size = New System.Drawing.Size(134, 70)
+        Me.cm_panel2.Size = New System.Drawing.Size(128, 70)
         '
         'ToolStripMenuItem8
         '
-        Me.ToolStripMenuItem8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.ToolStripMenuItem13, Me.BtcchinaToolStripMenuItem1})
+        Me.ToolStripMenuItem8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.ToolStripMenuItem13, Me.BtcchinaToolStripMenuItem1, Me.BtceToolStripMenuItem1})
         Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuItem8.Text = "market"
         '
         'ToolStripMenuItem9
         '
         Me.ToolStripMenuItem9.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_mtgoxeur, Me.cmp2_mtgoxusd, Me.cmp2_mtgoxgbp})
         Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem9.Text = "MTGOX"
         '
         'cmp2_mtgoxeur
         '
         Me.cmp2_mtgoxeur.Name = "cmp2_mtgoxeur"
-        Me.cmp2_mtgoxeur.Size = New System.Drawing.Size(96, 22)
+        Me.cmp2_mtgoxeur.Size = New System.Drawing.Size(94, 22)
         Me.cmp2_mtgoxeur.Text = "EUR"
         '
         'cmp2_mtgoxusd
         '
         Me.cmp2_mtgoxusd.Name = "cmp2_mtgoxusd"
-        Me.cmp2_mtgoxusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp2_mtgoxusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp2_mtgoxusd.Text = "USD"
         '
         'cmp2_mtgoxgbp
         '
         Me.cmp2_mtgoxgbp.Name = "cmp2_mtgoxgbp"
-        Me.cmp2_mtgoxgbp.Size = New System.Drawing.Size(96, 22)
+        Me.cmp2_mtgoxgbp.Size = New System.Drawing.Size(94, 22)
         Me.cmp2_mtgoxgbp.Text = "GBP"
         '
         'ToolStripMenuItem13
         '
         Me.ToolStripMenuItem13.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_bitstampusd})
         Me.ToolStripMenuItem13.Name = "ToolStripMenuItem13"
-        Me.ToolStripMenuItem13.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem13.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem13.Text = "bitstamp"
         '
         'cmp2_bitstampusd
         '
         Me.cmp2_bitstampusd.Name = "cmp2_bitstampusd"
-        Me.cmp2_bitstampusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp2_bitstampusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp2_bitstampusd.Text = "USD"
         '
         'BtcchinaToolStripMenuItem1
         '
         Me.BtcchinaToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_btcchinacny})
         Me.BtcchinaToolStripMenuItem1.Name = "BtcchinaToolStripMenuItem1"
-        Me.BtcchinaToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
+        Me.BtcchinaToolStripMenuItem1.Size = New System.Drawing.Size(115, 22)
         Me.BtcchinaToolStripMenuItem1.Text = "btcchina"
         '
         'cmp2_btcchinacny
         '
         Me.cmp2_btcchinacny.Name = "cmp2_btcchinacny"
-        Me.cmp2_btcchinacny.Size = New System.Drawing.Size(98, 22)
+        Me.cmp2_btcchinacny.Size = New System.Drawing.Size(94, 22)
         Me.cmp2_btcchinacny.Text = "CNY"
         '
         'cm_panel2_close
         '
         Me.cm_panel2_close.Name = "cm_panel2_close"
-        Me.cm_panel2_close.Size = New System.Drawing.Size(133, 22)
+        Me.cm_panel2_close.Size = New System.Drawing.Size(127, 22)
         Me.cm_panel2_close.Text = "close panel"
         '
         'ToolStripMenuItem16
         '
         Me.ToolStripMenuItem16.Name = "ToolStripMenuItem16"
-        Me.ToolStripMenuItem16.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripMenuItem16.Size = New System.Drawing.Size(127, 22)
         Me.ToolStripMenuItem16.Text = "alert"
         '
         'p2_value
         '
-        Me.p2_value.AutoSize = True
         Me.p2_value.BackColor = System.Drawing.Color.Black
         Me.p2_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p2_value.ForeColor = System.Drawing.Color.Lime
         Me.p2_value.Location = New System.Drawing.Point(3, 27)
         Me.p2_value.Name = "p2_value"
-        Me.p2_value.Size = New System.Drawing.Size(37, 29)
+        Me.p2_value.Size = New System.Drawing.Size(111, 29)
         Me.p2_value.TabIndex = 0
-        Me.p2_value.Text = "---"
+        Me.p2_value.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'rb_p2_alertonoff
         '
@@ -435,14 +441,12 @@ Partial Class Form1
         '
         'p2_cur
         '
-        Me.p2_cur.AutoSize = True
         Me.p2_cur.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p2_cur.ForeColor = System.Drawing.Color.White
         Me.p2_cur.Location = New System.Drawing.Point(116, 30)
         Me.p2_cur.Name = "p2_cur"
-        Me.p2_cur.Size = New System.Drawing.Size(33, 25)
+        Me.p2_cur.Size = New System.Drawing.Size(59, 25)
         Me.p2_cur.TabIndex = 1
-        Me.p2_cur.Text = "---"
         '
         'Panel3
         '
@@ -463,76 +467,76 @@ Partial Class Form1
         '
         Me.Cm_panel3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem24, Me.cm_panel3_close, Me.ToolStripMenuItem32})
         Me.Cm_panel3.Name = "cm_panel1"
-        Me.Cm_panel3.Size = New System.Drawing.Size(134, 70)
+        Me.Cm_panel3.Size = New System.Drawing.Size(128, 70)
         '
         'ToolStripMenuItem24
         '
-        Me.ToolStripMenuItem24.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem25, Me.ToolStripMenuItem29, Me.BtcchinaToolStripMenuItem2})
+        Me.ToolStripMenuItem24.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem25, Me.ToolStripMenuItem29, Me.BtcchinaToolStripMenuItem2, Me.BtceToolStripMenuItem2})
         Me.ToolStripMenuItem24.Name = "ToolStripMenuItem24"
-        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripMenuItem24.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuItem24.Text = "market"
         '
         'ToolStripMenuItem25
         '
         Me.ToolStripMenuItem25.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_mtgoxeur, Me.cmp3_mtgoxusd, Me.cmp3_mtgoxgbp})
         Me.ToolStripMenuItem25.Name = "ToolStripMenuItem25"
-        Me.ToolStripMenuItem25.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem25.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem25.Text = "MTGOX"
         '
         'cmp3_mtgoxeur
         '
         Me.cmp3_mtgoxeur.Name = "cmp3_mtgoxeur"
-        Me.cmp3_mtgoxeur.Size = New System.Drawing.Size(96, 22)
+        Me.cmp3_mtgoxeur.Size = New System.Drawing.Size(94, 22)
         Me.cmp3_mtgoxeur.Text = "EUR"
         '
         'cmp3_mtgoxusd
         '
         Me.cmp3_mtgoxusd.Name = "cmp3_mtgoxusd"
-        Me.cmp3_mtgoxusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp3_mtgoxusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp3_mtgoxusd.Text = "USD"
         '
         'cmp3_mtgoxgbp
         '
         Me.cmp3_mtgoxgbp.Name = "cmp3_mtgoxgbp"
-        Me.cmp3_mtgoxgbp.Size = New System.Drawing.Size(96, 22)
+        Me.cmp3_mtgoxgbp.Size = New System.Drawing.Size(94, 22)
         Me.cmp3_mtgoxgbp.Text = "GBP"
         '
         'ToolStripMenuItem29
         '
         Me.ToolStripMenuItem29.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_bitstampusd})
         Me.ToolStripMenuItem29.Name = "ToolStripMenuItem29"
-        Me.ToolStripMenuItem29.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem29.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem29.Text = "bitstamp"
         '
         'cmp3_bitstampusd
         '
         Me.cmp3_bitstampusd.Name = "cmp3_bitstampusd"
-        Me.cmp3_bitstampusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp3_bitstampusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp3_bitstampusd.Text = "USD"
         '
         'BtcchinaToolStripMenuItem2
         '
         Me.BtcchinaToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_btcchinacny})
         Me.BtcchinaToolStripMenuItem2.Name = "BtcchinaToolStripMenuItem2"
-        Me.BtcchinaToolStripMenuItem2.Size = New System.Drawing.Size(121, 22)
+        Me.BtcchinaToolStripMenuItem2.Size = New System.Drawing.Size(115, 22)
         Me.BtcchinaToolStripMenuItem2.Text = "btcchina"
         '
         'cmp3_btcchinacny
         '
         Me.cmp3_btcchinacny.Name = "cmp3_btcchinacny"
-        Me.cmp3_btcchinacny.Size = New System.Drawing.Size(98, 22)
+        Me.cmp3_btcchinacny.Size = New System.Drawing.Size(94, 22)
         Me.cmp3_btcchinacny.Text = "CNY"
         '
         'cm_panel3_close
         '
         Me.cm_panel3_close.Name = "cm_panel3_close"
-        Me.cm_panel3_close.Size = New System.Drawing.Size(133, 22)
+        Me.cm_panel3_close.Size = New System.Drawing.Size(127, 22)
         Me.cm_panel3_close.Text = "close panel"
         '
         'ToolStripMenuItem32
         '
         Me.ToolStripMenuItem32.Name = "ToolStripMenuItem32"
-        Me.ToolStripMenuItem32.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripMenuItem32.Size = New System.Drawing.Size(127, 22)
         Me.ToolStripMenuItem32.Text = "alert"
         '
         'rb_p3_alertonoff
@@ -578,49 +582,46 @@ Partial Class Form1
         '
         'p3_cur
         '
-        Me.p3_cur.AutoSize = True
         Me.p3_cur.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p3_cur.ForeColor = System.Drawing.Color.White
         Me.p3_cur.Location = New System.Drawing.Point(116, 30)
         Me.p3_cur.Name = "p3_cur"
-        Me.p3_cur.Size = New System.Drawing.Size(33, 25)
+        Me.p3_cur.Size = New System.Drawing.Size(59, 25)
         Me.p3_cur.TabIndex = 1
-        Me.p3_cur.Text = "---"
         '
         'p3_value
         '
-        Me.p3_value.AutoSize = True
         Me.p3_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p3_value.ForeColor = System.Drawing.Color.Lime
         Me.p3_value.Location = New System.Drawing.Point(3, 26)
         Me.p3_value.Name = "p3_value"
-        Me.p3_value.Size = New System.Drawing.Size(37, 29)
+        Me.p3_value.Size = New System.Drawing.Size(111, 29)
         Me.p3_value.TabIndex = 0
-        Me.p3_value.Text = "---"
+        Me.p3_value.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'cm_main
         '
         Me.cm_main.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPanelToolStripMenuItem, Me.MinimizeInTaskbarToolStripMenuItem, Me.PermamentToolStripMenuItem, Me.OpacityToolStripMenuItem, Me.LayoutToolStripMenuItem, Me.CloseToolStripMenuItem, Me.InfoToolStripMenuItem})
         Me.cm_main.Name = "cm_main"
-        Me.cm_main.Size = New System.Drawing.Size(176, 180)
+        Me.cm_main.Size = New System.Drawing.Size(164, 158)
         '
         'AddPanelToolStripMenuItem
         '
         Me.AddPanelToolStripMenuItem.Name = "AddPanelToolStripMenuItem"
-        Me.AddPanelToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.AddPanelToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.AddPanelToolStripMenuItem.Text = "Add panel"
         '
         'MinimizeInTaskbarToolStripMenuItem
         '
         Me.MinimizeInTaskbarToolStripMenuItem.Name = "MinimizeInTaskbarToolStripMenuItem"
-        Me.MinimizeInTaskbarToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.MinimizeInTaskbarToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.MinimizeInTaskbarToolStripMenuItem.Text = "minimize in systray"
         '
         'PermamentToolStripMenuItem
         '
         Me.PermamentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YesToolStripMenuItem, Me.NoToolStripMenuItem})
         Me.PermamentToolStripMenuItem.Name = "PermamentToolStripMenuItem"
-        Me.PermamentToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.PermamentToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.PermamentToolStripMenuItem.Text = "permament"
         '
         'YesToolStripMenuItem
@@ -639,69 +640,75 @@ Partial Class Form1
         '
         Me.OpacityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6})
         Me.OpacityToolStripMenuItem.Name = "OpacityToolStripMenuItem"
-        Me.OpacityToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.OpacityToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.OpacityToolStripMenuItem.Text = "opacity"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(102, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem2.Text = "100%"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(102, 22)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem3.Text = "75%"
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(102, 22)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem4.Text = "50%"
         '
         'ToolStripMenuItem5
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(102, 22)
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem5.Text = "25%"
         '
         'ToolStripMenuItem6
         '
         Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(102, 22)
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem6.Text = "10%"
         '
         'LayoutToolStripMenuItem
         '
         Me.LayoutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cm_main_4x1, Me.cm_main_1x4, Me.cm_main_2x2})
         Me.LayoutToolStripMenuItem.Name = "LayoutToolStripMenuItem"
-        Me.LayoutToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.LayoutToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.LayoutToolStripMenuItem.Text = "Layout"
         '
         'cm_main_4x1
         '
         Me.cm_main_4x1.Name = "cm_main_4x1"
-        Me.cm_main_4x1.Size = New System.Drawing.Size(91, 22)
+        Me.cm_main_4x1.Size = New System.Drawing.Size(92, 22)
         Me.cm_main_4x1.Text = "4x1"
         '
         'cm_main_1x4
         '
         Me.cm_main_1x4.Name = "cm_main_1x4"
-        Me.cm_main_1x4.Size = New System.Drawing.Size(91, 22)
+        Me.cm_main_1x4.Size = New System.Drawing.Size(92, 22)
         Me.cm_main_1x4.Text = "1x4"
         '
         'cm_main_2x2
         '
         Me.cm_main_2x2.Name = "cm_main_2x2"
-        Me.cm_main_2x2.Size = New System.Drawing.Size(91, 22)
+        Me.cm_main_2x2.Size = New System.Drawing.Size(92, 22)
         Me.cm_main_2x2.Text = "2x2"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'InfoToolStripMenuItem
+        '
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.InfoToolStripMenuItem.Text = "Info"
         '
         'ToolTip1
         '
@@ -731,76 +738,76 @@ Partial Class Form1
         '
         Me.cm_panel4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.cm_panel4_close, Me.cmp4_alarm})
         Me.cm_panel4.Name = "cm_panel1"
-        Me.cm_panel4.Size = New System.Drawing.Size(134, 70)
+        Me.cm_panel4.Size = New System.Drawing.Size(153, 92)
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem7, Me.ToolStripMenuItem19, Me.ToolStripMenuItem21})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem7, Me.ToolStripMenuItem19, Me.ToolStripMenuItem21, Me.BtceToolStripMenuItem3})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuItem1.Text = "market"
         '
         'ToolStripMenuItem7
         '
         Me.ToolStripMenuItem7.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_mtgoxeur, Me.cmp4_mtgoxusd, Me.cmp4_mtgoxgbp})
         Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem7.Text = "MTGOX"
         '
         'cmp4_mtgoxeur
         '
         Me.cmp4_mtgoxeur.Name = "cmp4_mtgoxeur"
-        Me.cmp4_mtgoxeur.Size = New System.Drawing.Size(96, 22)
+        Me.cmp4_mtgoxeur.Size = New System.Drawing.Size(94, 22)
         Me.cmp4_mtgoxeur.Text = "EUR"
         '
         'cmp4_mtgoxusd
         '
         Me.cmp4_mtgoxusd.Name = "cmp4_mtgoxusd"
-        Me.cmp4_mtgoxusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp4_mtgoxusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp4_mtgoxusd.Text = "USD"
         '
         'cmp4_mtgoxgbp
         '
         Me.cmp4_mtgoxgbp.Name = "cmp4_mtgoxgbp"
-        Me.cmp4_mtgoxgbp.Size = New System.Drawing.Size(96, 22)
+        Me.cmp4_mtgoxgbp.Size = New System.Drawing.Size(94, 22)
         Me.cmp4_mtgoxgbp.Text = "GBP"
         '
         'ToolStripMenuItem19
         '
         Me.ToolStripMenuItem19.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_bitstampusd})
         Me.ToolStripMenuItem19.Name = "ToolStripMenuItem19"
-        Me.ToolStripMenuItem19.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem19.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem19.Text = "bitstamp"
         '
         'cmp4_bitstampusd
         '
         Me.cmp4_bitstampusd.Name = "cmp4_bitstampusd"
-        Me.cmp4_bitstampusd.Size = New System.Drawing.Size(96, 22)
+        Me.cmp4_bitstampusd.Size = New System.Drawing.Size(94, 22)
         Me.cmp4_bitstampusd.Text = "USD"
         '
         'ToolStripMenuItem21
         '
         Me.ToolStripMenuItem21.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_btcchinacny})
         Me.ToolStripMenuItem21.Name = "ToolStripMenuItem21"
-        Me.ToolStripMenuItem21.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripMenuItem21.Size = New System.Drawing.Size(115, 22)
         Me.ToolStripMenuItem21.Text = "btcchina"
         '
         'cmp4_btcchinacny
         '
         Me.cmp4_btcchinacny.Name = "cmp4_btcchinacny"
-        Me.cmp4_btcchinacny.Size = New System.Drawing.Size(98, 22)
+        Me.cmp4_btcchinacny.Size = New System.Drawing.Size(94, 22)
         Me.cmp4_btcchinacny.Text = "CNY"
         '
         'cm_panel4_close
         '
         Me.cm_panel4_close.Name = "cm_panel4_close"
-        Me.cm_panel4_close.Size = New System.Drawing.Size(133, 22)
+        Me.cm_panel4_close.Size = New System.Drawing.Size(127, 22)
         Me.cm_panel4_close.Text = "close panel"
         '
         'cmp4_alarm
         '
         Me.cmp4_alarm.Name = "cmp4_alarm"
-        Me.cmp4_alarm.Size = New System.Drawing.Size(133, 22)
+        Me.cmp4_alarm.Size = New System.Drawing.Size(127, 22)
         Me.cmp4_alarm.Text = "alert"
         '
         'rb_p4_alertonoff
@@ -846,25 +853,22 @@ Partial Class Form1
         '
         'p4_cur
         '
-        Me.p4_cur.AutoSize = True
         Me.p4_cur.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p4_cur.ForeColor = System.Drawing.Color.White
         Me.p4_cur.Location = New System.Drawing.Point(116, 30)
         Me.p4_cur.Name = "p4_cur"
-        Me.p4_cur.Size = New System.Drawing.Size(33, 25)
+        Me.p4_cur.Size = New System.Drawing.Size(59, 25)
         Me.p4_cur.TabIndex = 1
-        Me.p4_cur.Text = "---"
         '
         'p4_value
         '
-        Me.p4_value.AutoSize = True
         Me.p4_value.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p4_value.ForeColor = System.Drawing.Color.Lime
         Me.p4_value.Location = New System.Drawing.Point(3, 26)
         Me.p4_value.Name = "p4_value"
-        Me.p4_value.Size = New System.Drawing.Size(37, 29)
+        Me.p4_value.Size = New System.Drawing.Size(111, 29)
         Me.p4_value.TabIndex = 0
-        Me.p4_value.Text = "---"
+        Me.p4_value.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'alert_timer
         '
@@ -877,11 +881,81 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "btcmon"
         Me.NotifyIcon1.Visible = True
         '
-        'InfoToolStripMenuItem
+        'BtceToolStripMenuItem
         '
-        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
-        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
-        Me.InfoToolStripMenuItem.Text = "Info"
+        Me.BtceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USDToolStripMenuItem2, Me.EURToolStripMenuItem1})
+        Me.BtceToolStripMenuItem.Name = "BtceToolStripMenuItem"
+        Me.BtceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BtceToolStripMenuItem.Text = "btc-e"
+        '
+        'USDToolStripMenuItem2
+        '
+        Me.USDToolStripMenuItem2.Name = "USDToolStripMenuItem2"
+        Me.USDToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem2.Text = "USD"
+        '
+        'EURToolStripMenuItem1
+        '
+        Me.EURToolStripMenuItem1.Name = "EURToolStripMenuItem1"
+        Me.EURToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem1.Text = "EUR"
+        '
+        'BtceToolStripMenuItem1
+        '
+        Me.BtceToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USDToolStripMenuItem3, Me.EURToolStripMenuItem2})
+        Me.BtceToolStripMenuItem1.Name = "BtceToolStripMenuItem1"
+        Me.BtceToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.BtceToolStripMenuItem1.Text = "btc-e"
+        '
+        'USDToolStripMenuItem3
+        '
+        Me.USDToolStripMenuItem3.Name = "USDToolStripMenuItem3"
+        Me.USDToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem3.Text = "USD"
+        '
+        'EURToolStripMenuItem2
+        '
+        Me.EURToolStripMenuItem2.Name = "EURToolStripMenuItem2"
+        Me.EURToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem2.Text = "EUR"
+        '
+        'BtceToolStripMenuItem2
+        '
+        Me.BtceToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USDToolStripMenuItem4, Me.EURToolStripMenuItem3})
+        Me.BtceToolStripMenuItem2.Name = "BtceToolStripMenuItem2"
+        Me.BtceToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.BtceToolStripMenuItem2.Text = "btc-e"
+        '
+        'USDToolStripMenuItem4
+        '
+        Me.USDToolStripMenuItem4.Name = "USDToolStripMenuItem4"
+        Me.USDToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem4.Text = "USD"
+        '
+        'EURToolStripMenuItem3
+        '
+        Me.EURToolStripMenuItem3.Name = "EURToolStripMenuItem3"
+        Me.EURToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem3.Text = "EUR"
+        '
+        'BtceToolStripMenuItem3
+        '
+        Me.BtceToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.USDToolStripMenuItem5, Me.EURToolStripMenuItem4})
+        Me.BtceToolStripMenuItem3.Name = "BtceToolStripMenuItem3"
+        Me.BtceToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.BtceToolStripMenuItem3.Text = "btc-e"
+        '
+        'USDToolStripMenuItem5
+        '
+        Me.USDToolStripMenuItem5.Name = "USDToolStripMenuItem5"
+        Me.USDToolStripMenuItem5.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem5.Text = "USD"
+        '
+        'EURToolStripMenuItem4
+        '
+        Me.EURToolStripMenuItem4.Name = "EURToolStripMenuItem4"
+        Me.EURToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem4.Text = "EUR"
         '
         'Form1
         '
@@ -1017,5 +1091,17 @@ Partial Class Form1
     Friend WithEvents alert_timer As System.Windows.Forms.Timer
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents InfoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents USDToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EURToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtceToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents USDToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EURToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtceToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents USDToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EURToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtceToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents USDToolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EURToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

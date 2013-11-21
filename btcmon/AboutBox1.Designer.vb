@@ -100,7 +100,7 @@ Partial Class AboutBox1
         Me.LabelVersion.Name = "LabelVersion"
         Me.LabelVersion.Size = New System.Drawing.Size(257, 17)
         Me.LabelVersion.TabIndex = 0
-        Me.LabelVersion.Text = "Version 1.1"
+        Me.LabelVersion.Text = "Version 2.0"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCopyright
