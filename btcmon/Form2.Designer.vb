@@ -54,7 +54,7 @@ Partial Class Form2
         '
         'nud_alert_lower
         '
-        Me.nud_alert_lower.DecimalPlaces = 2
+        Me.nud_alert_lower.DecimalPlaces = 8
         Me.nud_alert_lower.Location = New System.Drawing.Point(140, 3)
         Me.nud_alert_lower.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nud_alert_lower.Name = "nud_alert_lower"
@@ -64,7 +64,7 @@ Partial Class Form2
         '
         'nud_alert_higher
         '
-        Me.nud_alert_higher.DecimalPlaces = 2
+        Me.nud_alert_higher.DecimalPlaces = 8
         Me.nud_alert_higher.Location = New System.Drawing.Point(140, 47)
         Me.nud_alert_higher.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nud_alert_higher.Name = "nud_alert_higher"
