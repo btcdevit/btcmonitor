@@ -52,8 +52,8 @@ Partial Class Form1
         Me.cmp1_cryptsy_btbbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_capbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp1_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp1_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp1_cryptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
@@ -108,6 +108,13 @@ Partial Class Form1
         Me.cmp2_cryptsy_bbqbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp2_cryptsy_BTBbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp2_cryptsy_capbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp2_kraken = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp2_kraken_btcusd = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp2_kraken_btceur = New System.Windows.Forms.ToolStripMenuItem()
@@ -158,6 +165,13 @@ Partial Class Form1
         Me.cmp3_cryptsybbqbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp3_cryptsybtbbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp3_cryptsycapbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp3_kraken = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp3_kraken_btcusd = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp3_kraken_btceur = New System.Windows.Forms.ToolStripMenuItem()
@@ -228,6 +242,13 @@ Partial Class Form1
         Me.cmp4_cryptsy_bbqbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp4_cryptsy_btcbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp4_cryptsy_capbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_crptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp4_kraken = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp4_kraken_btcusd = New System.Windows.Forms.ToolStripMenuItem()
         Me.cmp4_kraken_btceur = New System.Windows.Forms.ToolStripMenuItem()
@@ -254,27 +275,14 @@ Partial Class Form1
         Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
         Me.alert_timer = New System.Windows.Forms.Timer(Me.components)
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.cmp2_cryptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp2_cryptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp3_cryptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_crcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_elcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_frcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_frkbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_ltcbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_ptsbtc = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cmp4_crptsy_trcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp1_cryptsy_glxbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp1_cryptsy_sbcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_glxbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp2_cryptsy_sbcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_glxbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp3_cryptsy_sbcbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_cryptsy_glxbtc = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cmp4_cryptsy_sbcbtc = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.cm_panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -313,7 +321,7 @@ Partial Class Form1
         '
         Me.cmp1_market.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MTGOXToolStripMenuItem, Me.BitstampToolStripMenuItem, Me.BtcchinaToolStripMenuItem, Me.BtceToolStripMenuItem, Me.cmp1_cryptsy, Me.cmp1_kraken})
         Me.cmp1_market.Name = "cmp1_market"
-        Me.cmp1_market.Size = New System.Drawing.Size(152, 22)
+        Me.cmp1_market.Size = New System.Drawing.Size(111, 22)
         Me.cmp1_market.Text = "market"
         '
         'MTGOXToolStripMenuItem
@@ -326,19 +334,19 @@ Partial Class Form1
         'EURToolStripMenuItem
         '
         Me.EURToolStripMenuItem.Name = "EURToolStripMenuItem"
-        Me.EURToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.EURToolStripMenuItem.Text = "BTC/EUR"
         '
         'USDToolStripMenuItem
         '
         Me.USDToolStripMenuItem.Name = "USDToolStripMenuItem"
-        Me.USDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.USDToolStripMenuItem.Text = "BTC/USD"
         '
         'GBPToolStripMenuItem
         '
         Me.GBPToolStripMenuItem.Name = "GBPToolStripMenuItem"
-        Me.GBPToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GBPToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.GBPToolStripMenuItem.Text = "BTC/GBP"
         '
         'BitstampToolStripMenuItem
@@ -351,7 +359,7 @@ Partial Class Form1
         'USDToolStripMenuItem1
         '
         Me.USDToolStripMenuItem1.Name = "USDToolStripMenuItem1"
-        Me.USDToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem1.Size = New System.Drawing.Size(123, 22)
         Me.USDToolStripMenuItem1.Text = "BTC/USD"
         '
         'BtcchinaToolStripMenuItem
@@ -364,7 +372,7 @@ Partial Class Form1
         'CNYToolStripMenuItem
         '
         Me.CNYToolStripMenuItem.Name = "CNYToolStripMenuItem"
-        Me.CNYToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CNYToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.CNYToolStripMenuItem.Text = "BTC/CNY"
         '
         'BtceToolStripMenuItem
@@ -377,72 +385,72 @@ Partial Class Form1
         'USDToolStripMenuItem2
         '
         Me.USDToolStripMenuItem2.Name = "USDToolStripMenuItem2"
-        Me.USDToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.USDToolStripMenuItem2.Text = "BTC/USD"
         '
         'EURToolStripMenuItem1
         '
         Me.EURToolStripMenuItem1.Name = "EURToolStripMenuItem1"
-        Me.EURToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.EURToolStripMenuItem1.Text = "BTC/EUR"
         '
         'LTCUSDToolStripMenuItem
         '
         Me.LTCUSDToolStripMenuItem.Name = "LTCUSDToolStripMenuItem"
-        Me.LTCUSDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LTCUSDToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.LTCUSDToolStripMenuItem.Text = "LTC/USD"
         '
         'LTCBTCToolStripMenuItem
         '
         Me.LTCBTCToolStripMenuItem.Name = "LTCBTCToolStripMenuItem"
-        Me.LTCBTCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LTCBTCToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.LTCBTCToolStripMenuItem.Text = "LTC/BTC"
         '
         'LTCEURToolStripMenuItem
         '
         Me.LTCEURToolStripMenuItem.Name = "LTCEURToolStripMenuItem"
-        Me.LTCEURToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LTCEURToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.LTCEURToolStripMenuItem.Text = "LTC/EUR"
         '
         'NMCUSDToolStripMenuItem
         '
         Me.NMCUSDToolStripMenuItem.Name = "NMCUSDToolStripMenuItem"
-        Me.NMCUSDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NMCUSDToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.NMCUSDToolStripMenuItem.Text = "NMC/USD"
         '
         'NMCBTCToolStripMenuItem
         '
         Me.NMCBTCToolStripMenuItem.Name = "NMCBTCToolStripMenuItem"
-        Me.NMCBTCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NMCBTCToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.NMCBTCToolStripMenuItem.Text = "NMC/BTC"
         '
         'NVCUSDToolStripMenuItem
         '
         Me.NVCUSDToolStripMenuItem.Name = "NVCUSDToolStripMenuItem"
-        Me.NVCUSDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NVCUSDToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.NVCUSDToolStripMenuItem.Text = "NVC/USD"
         '
         'NVCBTCToolStripMenuItem
         '
         Me.NVCBTCToolStripMenuItem.Name = "NVCBTCToolStripMenuItem"
-        Me.NVCBTCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NVCBTCToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.NVCBTCToolStripMenuItem.Text = "NVC/BTC"
         '
         'PPCUSDBToolStripMenuItem
         '
         Me.PPCUSDBToolStripMenuItem.Name = "PPCUSDBToolStripMenuItem"
-        Me.PPCUSDBToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PPCUSDBToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.PPCUSDBToolStripMenuItem.Text = "PPC/USD"
         '
         'PPCBTCToolStripMenuItem
         '
         Me.PPCBTCToolStripMenuItem.Name = "PPCBTCToolStripMenuItem"
-        Me.PPCBTCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PPCBTCToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.PPCBTCToolStripMenuItem.Text = "PPC/BTC"
         '
         'cmp1_cryptsy
         '
-        Me.cmp1_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp1_cryptsy_bbqbtc, Me.cmp1_cryptsy_btbbtc, Me.cmp1_cryptsy_capbtc, Me.cmp1_cryptsy_crcbtc, Me.cmp1_cryptsy_elcbtc, Me.cmp1_cryptsy_frcbtc, Me.cmp1_cryptsy_frkbtc, Me.cmp1_cryptsy_ltcbtc, Me.cmp1_cryptsy_trcbtc, Me.cmp1_cryptsy_ptsbtc})
+        Me.cmp1_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp1_cryptsy_bbqbtc, Me.cmp1_cryptsy_btbbtc, Me.cmp1_cryptsy_capbtc, Me.cmp1_cryptsy_crcbtc, Me.cmp1_cryptsy_elcbtc, Me.cmp1_cryptsy_frcbtc, Me.cmp1_cryptsy_frkbtc, Me.cmp1_cryptsy_glxbtc, Me.cmp1_cryptsy_ltcbtc, Me.cmp1_cryptsy_trcbtc, Me.cmp1_cryptsy_ptsbtc, Me.cmp1_cryptsy_sbcbtc})
         Me.cmp1_cryptsy.Name = "cmp1_cryptsy"
         Me.cmp1_cryptsy.Size = New System.Drawing.Size(152, 22)
         Me.cmp1_cryptsy.Text = "cryptsy"
@@ -471,17 +479,17 @@ Partial Class Form1
         Me.cmp1_cryptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
         Me.cmp1_cryptsy_crcbtc.Text = "CRC/BTC"
         '
-        'cmp1_cryptsy_frcbtc
-        '
-        Me.cmp1_cryptsy_frcbtc.Name = "cmp1_cryptsy_frcbtc"
-        Me.cmp1_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp1_cryptsy_frcbtc.Text = "FRC/BTC"
-        '
         'cmp1_cryptsy_elcbtc
         '
         Me.cmp1_cryptsy_elcbtc.Name = "cmp1_cryptsy_elcbtc"
         Me.cmp1_cryptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
         Me.cmp1_cryptsy_elcbtc.Text = "ELC/BTC"
+        '
+        'cmp1_cryptsy_frcbtc
+        '
+        Me.cmp1_cryptsy_frcbtc.Name = "cmp1_cryptsy_frcbtc"
+        Me.cmp1_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp1_cryptsy_frcbtc.Text = "FRC/BTC"
         '
         'cmp1_cryptsy_frkbtc
         '
@@ -517,31 +525,31 @@ Partial Class Form1
         'BTCUSDToolStripMenuItem
         '
         Me.BTCUSDToolStripMenuItem.Name = "BTCUSDToolStripMenuItem"
-        Me.BTCUSDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BTCUSDToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.BTCUSDToolStripMenuItem.Text = "BTC/USD"
         '
         'BTCEURToolStripMenuItem
         '
         Me.BTCEURToolStripMenuItem.Name = "BTCEURToolStripMenuItem"
-        Me.BTCEURToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BTCEURToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.BTCEURToolStripMenuItem.Text = "BTC/EUR"
         '
         'BTCLTCToolStripMenuItem
         '
         Me.BTCLTCToolStripMenuItem.Name = "BTCLTCToolStripMenuItem"
-        Me.BTCLTCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BTCLTCToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
         Me.BTCLTCToolStripMenuItem.Text = "BTC/LTC"
         '
         'LTCUSDToolStripMenuItem4
         '
         Me.LTCUSDToolStripMenuItem4.Name = "LTCUSDToolStripMenuItem4"
-        Me.LTCUSDToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.LTCUSDToolStripMenuItem4.Size = New System.Drawing.Size(123, 22)
         Me.LTCUSDToolStripMenuItem4.Text = "LTC/USD"
         '
         'LTCEURToolStripMenuItem4
         '
         Me.LTCEURToolStripMenuItem4.Name = "LTCEURToolStripMenuItem4"
-        Me.LTCEURToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.LTCEURToolStripMenuItem4.Size = New System.Drawing.Size(123, 22)
         Me.LTCEURToolStripMenuItem4.Text = "LTC/EUR"
         '
         'cmp1_alert
@@ -701,7 +709,7 @@ Partial Class Form1
         '
         Me.cmp2_market.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_mtgox, Me.cmp2_bitstamp, Me.cmp2_btcchina, Me.cmp2_btce, Me.cmp2_cryptsy, Me.cmp2_kraken})
         Me.cmp2_market.Name = "cmp2_market"
-        Me.cmp2_market.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_market.Size = New System.Drawing.Size(133, 22)
         Me.cmp2_market.Text = "market"
         '
         'cmp2_mtgox
@@ -714,19 +722,19 @@ Partial Class Form1
         'cmp2_mtgoxeur
         '
         Me.cmp2_mtgoxeur.Name = "cmp2_mtgoxeur"
-        Me.cmp2_mtgoxeur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_mtgoxeur.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_mtgoxeur.Text = "BTC/EUR"
         '
         'cmp2_mtgoxusd
         '
         Me.cmp2_mtgoxusd.Name = "cmp2_mtgoxusd"
-        Me.cmp2_mtgoxusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_mtgoxusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_mtgoxusd.Text = "BTC/USD"
         '
         'cmp2_mtgoxgbp
         '
         Me.cmp2_mtgoxgbp.Name = "cmp2_mtgoxgbp"
-        Me.cmp2_mtgoxgbp.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_mtgoxgbp.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_mtgoxgbp.Text = "BTC/GBP"
         '
         'cmp2_bitstamp
@@ -739,7 +747,7 @@ Partial Class Form1
         'cmp2_bitstampusd
         '
         Me.cmp2_bitstampusd.Name = "cmp2_bitstampusd"
-        Me.cmp2_bitstampusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_bitstampusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_bitstampusd.Text = "BTC/USD"
         '
         'cmp2_btcchina
@@ -752,7 +760,7 @@ Partial Class Form1
         'cmp2_btcchinacny
         '
         Me.cmp2_btcchinacny.Name = "cmp2_btcchinacny"
-        Me.cmp2_btcchinacny.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_btcchinacny.Size = New System.Drawing.Size(125, 22)
         Me.cmp2_btcchinacny.Text = "BTC/CNY"
         '
         'cmp2_btce
@@ -765,72 +773,72 @@ Partial Class Form1
         'USDToolStripMenuItem3
         '
         Me.USDToolStripMenuItem3.Name = "USDToolStripMenuItem3"
-        Me.USDToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem3.Size = New System.Drawing.Size(129, 22)
         Me.USDToolStripMenuItem3.Text = "BTC/USD"
         '
         'EURToolStripMenuItem2
         '
         Me.EURToolStripMenuItem2.Name = "EURToolStripMenuItem2"
-        Me.EURToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.EURToolStripMenuItem2.Text = "BTC/EUR"
         '
         'LTCUSDToolStripMenuItem1
         '
         Me.LTCUSDToolStripMenuItem1.Name = "LTCUSDToolStripMenuItem1"
-        Me.LTCUSDToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.LTCUSDToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.LTCUSDToolStripMenuItem1.Text = "LTC/USD"
         '
         'LTCBTCToolStripMenuItem1
         '
         Me.LTCBTCToolStripMenuItem1.Name = "LTCBTCToolStripMenuItem1"
-        Me.LTCBTCToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.LTCBTCToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.LTCBTCToolStripMenuItem1.Text = "LTC/BTC"
         '
         'LTCEURToolStripMenuItem1
         '
         Me.LTCEURToolStripMenuItem1.Name = "LTCEURToolStripMenuItem1"
-        Me.LTCEURToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.LTCEURToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.LTCEURToolStripMenuItem1.Text = "LTC/EUR"
         '
         'NMCUSDToolStripMenuItem1
         '
         Me.NMCUSDToolStripMenuItem1.Name = "NMCUSDToolStripMenuItem1"
-        Me.NMCUSDToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NMCUSDToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.NMCUSDToolStripMenuItem1.Text = "NMC/USD"
         '
         'NMCBTCToolStripMenuItem1
         '
         Me.NMCBTCToolStripMenuItem1.Name = "NMCBTCToolStripMenuItem1"
-        Me.NMCBTCToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NMCBTCToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.NMCBTCToolStripMenuItem1.Text = "NMC/BTC"
         '
         'NVCUSDToolStripMenuItem1
         '
         Me.NVCUSDToolStripMenuItem1.Name = "NVCUSDToolStripMenuItem1"
-        Me.NVCUSDToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NVCUSDToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.NVCUSDToolStripMenuItem1.Text = "NVC/USD"
         '
         'NVCBTCToolStripMenuItem1
         '
         Me.NVCBTCToolStripMenuItem1.Name = "NVCBTCToolStripMenuItem1"
-        Me.NVCBTCToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NVCBTCToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.NVCBTCToolStripMenuItem1.Text = "NVC/BTC"
         '
         'PPCUSDToolStripMenuItem
         '
         Me.PPCUSDToolStripMenuItem.Name = "PPCUSDToolStripMenuItem"
-        Me.PPCUSDToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PPCUSDToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.PPCUSDToolStripMenuItem.Text = "PPC/USD"
         '
         'PPCBTCToolStripMenuItem1
         '
         Me.PPCBTCToolStripMenuItem1.Name = "PPCBTCToolStripMenuItem1"
-        Me.PPCBTCToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PPCBTCToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.PPCBTCToolStripMenuItem1.Text = "PPC/BTC"
         '
         'cmp2_cryptsy
         '
-        Me.cmp2_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_cryptsy_bbqbtc, Me.cmp2_cryptsy_BTBbtc, Me.cmp2_cryptsy_capbtc, Me.cmp2_cryptsy_crcbtc, Me.cmp2_cryptsy_elcbtc, Me.cmp2_cryptsy_frcbtc, Me.cmp2_cryptsy_frkbtc, Me.cmp2_cryptsy_ltcbtc, Me.cmp2_cryptsy_trcbtc, Me.cmp2_cryptsy_ptsbtc})
+        Me.cmp2_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_cryptsy_bbqbtc, Me.cmp2_cryptsy_BTBbtc, Me.cmp2_cryptsy_capbtc, Me.cmp2_cryptsy_crcbtc, Me.cmp2_cryptsy_elcbtc, Me.cmp2_cryptsy_frcbtc, Me.cmp2_cryptsy_frkbtc, Me.cmp2_cryptsy_glxbtc, Me.cmp2_cryptsy_ltcbtc, Me.cmp2_cryptsy_trcbtc, Me.cmp2_cryptsy_ptsbtc, Me.cmp2_cryptsy_sbcbtc})
         Me.cmp2_cryptsy.Name = "cmp2_cryptsy"
         Me.cmp2_cryptsy.Size = New System.Drawing.Size(152, 22)
         Me.cmp2_cryptsy.Text = "cryptsy"
@@ -853,6 +861,48 @@ Partial Class Form1
         Me.cmp2_cryptsy_capbtc.Size = New System.Drawing.Size(152, 22)
         Me.cmp2_cryptsy_capbtc.Text = "CAP/BTC"
         '
+        'cmp2_cryptsy_crcbtc
+        '
+        Me.cmp2_cryptsy_crcbtc.Name = "cmp2_cryptsy_crcbtc"
+        Me.cmp2_cryptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_crcbtc.Text = "CRC/BTC"
+        '
+        'cmp2_cryptsy_elcbtc
+        '
+        Me.cmp2_cryptsy_elcbtc.Name = "cmp2_cryptsy_elcbtc"
+        Me.cmp2_cryptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_elcbtc.Text = "ELC/BTC"
+        '
+        'cmp2_cryptsy_frcbtc
+        '
+        Me.cmp2_cryptsy_frcbtc.Name = "cmp2_cryptsy_frcbtc"
+        Me.cmp2_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_frcbtc.Text = "FRC/BTC"
+        '
+        'cmp2_cryptsy_frkbtc
+        '
+        Me.cmp2_cryptsy_frkbtc.Name = "cmp2_cryptsy_frkbtc"
+        Me.cmp2_cryptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_frkbtc.Text = "FRK/BTC"
+        '
+        'cmp2_cryptsy_ltcbtc
+        '
+        Me.cmp2_cryptsy_ltcbtc.Name = "cmp2_cryptsy_ltcbtc"
+        Me.cmp2_cryptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_ltcbtc.Text = "LTC/BTC"
+        '
+        'cmp2_cryptsy_trcbtc
+        '
+        Me.cmp2_cryptsy_trcbtc.Name = "cmp2_cryptsy_trcbtc"
+        Me.cmp2_cryptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_trcbtc.Text = "TRC/BTC"
+        '
+        'cmp2_cryptsy_ptsbtc
+        '
+        Me.cmp2_cryptsy_ptsbtc.Name = "cmp2_cryptsy_ptsbtc"
+        Me.cmp2_cryptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_ptsbtc.Text = "PTS/BTC"
+        '
         'cmp2_kraken
         '
         Me.cmp2_kraken.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp2_kraken_btcusd, Me.cmp2_kraken_btceur, Me.cmp2_kraken_btcltc, Me.cmp2_kraken_ltcusd, Me.cmp2_kraken_ltceur})
@@ -863,31 +913,31 @@ Partial Class Form1
         'cmp2_kraken_btcusd
         '
         Me.cmp2_kraken_btcusd.Name = "cmp2_kraken_btcusd"
-        Me.cmp2_kraken_btcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_kraken_btcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_kraken_btcusd.Text = "BTC/USD"
         '
         'cmp2_kraken_btceur
         '
         Me.cmp2_kraken_btceur.Name = "cmp2_kraken_btceur"
-        Me.cmp2_kraken_btceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_kraken_btceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_kraken_btceur.Text = "BTC/EUR"
         '
         'cmp2_kraken_btcltc
         '
         Me.cmp2_kraken_btcltc.Name = "cmp2_kraken_btcltc"
-        Me.cmp2_kraken_btcltc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_kraken_btcltc.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_kraken_btcltc.Text = "BTC/LTC"
         '
         'cmp2_kraken_ltcusd
         '
         Me.cmp2_kraken_ltcusd.Name = "cmp2_kraken_ltcusd"
-        Me.cmp2_kraken_ltcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_kraken_ltcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_kraken_ltcusd.Text = "LTC/USD"
         '
         'cmp2_kraken_ltceur
         '
         Me.cmp2_kraken_ltceur.Name = "cmp2_kraken_ltceur"
-        Me.cmp2_kraken_ltceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_kraken_ltceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp2_kraken_ltceur.Text = "LTC/EUR"
         '
         'cm_panel2_close
@@ -912,43 +962,43 @@ Partial Class Form1
         'ToolStripMenuItem20
         '
         Me.ToolStripMenuItem20.Name = "ToolStripMenuItem20"
-        Me.ToolStripMenuItem20.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem20.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem20.Text = "0000"
         '
         'ToolStripMenuItem22
         '
         Me.ToolStripMenuItem22.Name = "ToolStripMenuItem22"
-        Me.ToolStripMenuItem22.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem22.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem22.Text = "0000.0"
         '
         'ToolStripMenuItem23
         '
         Me.ToolStripMenuItem23.Name = "ToolStripMenuItem23"
-        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem23.Text = "0000.00"
         '
         'ToolStripMenuItem27
         '
         Me.ToolStripMenuItem27.Name = "ToolStripMenuItem27"
-        Me.ToolStripMenuItem27.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem27.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem27.Text = "000.000"
         '
         'ToolStripMenuItem26
         '
         Me.ToolStripMenuItem26.Name = "ToolStripMenuItem26"
-        Me.ToolStripMenuItem26.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem26.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem26.Text = "00.0000"
         '
         'ToolStripMenuItem28
         '
         Me.ToolStripMenuItem28.Name = "ToolStripMenuItem28"
-        Me.ToolStripMenuItem28.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem28.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem28.Text = "0.00000"
         '
         'ToolStripMenuItem7
         '
         Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(131, 22)
         Me.ToolStripMenuItem7.Text = "0.00000000"
         '
         'p2_coin
@@ -1041,7 +1091,7 @@ Partial Class Form1
         '
         Me.Cm_panel3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_market, Me.cm_panel3_close, Me.cmp3_alert, Me.cmp3_format})
         Me.Cm_panel3.Name = "cm_panel1"
-        Me.Cm_panel3.Size = New System.Drawing.Size(134, 92)
+        Me.Cm_panel3.Size = New System.Drawing.Size(153, 114)
         '
         'cmp3_market
         '
@@ -1060,19 +1110,19 @@ Partial Class Form1
         'cmp3_mtgoxeur
         '
         Me.cmp3_mtgoxeur.Name = "cmp3_mtgoxeur"
-        Me.cmp3_mtgoxeur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_mtgoxeur.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_mtgoxeur.Text = "BTC/EUR"
         '
         'cmp3_mtgoxusd
         '
         Me.cmp3_mtgoxusd.Name = "cmp3_mtgoxusd"
-        Me.cmp3_mtgoxusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_mtgoxusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_mtgoxusd.Text = "BTC/USD"
         '
         'cmp3_mtgoxgbp
         '
         Me.cmp3_mtgoxgbp.Name = "cmp3_mtgoxgbp"
-        Me.cmp3_mtgoxgbp.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_mtgoxgbp.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_mtgoxgbp.Text = "BTC/GBP"
         '
         'cmp3_bitstamp
@@ -1085,7 +1135,7 @@ Partial Class Form1
         'cmp3_bitstampusd
         '
         Me.cmp3_bitstampusd.Name = "cmp3_bitstampusd"
-        Me.cmp3_bitstampusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_bitstampusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_bitstampusd.Text = "BTC/USD"
         '
         'cmp3_btce
@@ -1098,67 +1148,67 @@ Partial Class Form1
         'USDToolStripMenuItem4
         '
         Me.USDToolStripMenuItem4.Name = "USDToolStripMenuItem4"
-        Me.USDToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.USDToolStripMenuItem4.Size = New System.Drawing.Size(129, 22)
         Me.USDToolStripMenuItem4.Text = "BTC/USD"
         '
         'EURToolStripMenuItem3
         '
         Me.EURToolStripMenuItem3.Name = "EURToolStripMenuItem3"
-        Me.EURToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.EURToolStripMenuItem3.Size = New System.Drawing.Size(129, 22)
         Me.EURToolStripMenuItem3.Text = "BTC/EUR"
         '
         'LTCUSDToolStripMenuItem2
         '
         Me.LTCUSDToolStripMenuItem2.Name = "LTCUSDToolStripMenuItem2"
-        Me.LTCUSDToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.LTCUSDToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.LTCUSDToolStripMenuItem2.Text = "LTC/USD"
         '
         'LTCEURToolStripMenuItem2
         '
         Me.LTCEURToolStripMenuItem2.Name = "LTCEURToolStripMenuItem2"
-        Me.LTCEURToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.LTCEURToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.LTCEURToolStripMenuItem2.Text = "LTC/EUR"
         '
         'LTCBTCToolStripMenuItem2
         '
         Me.LTCBTCToolStripMenuItem2.Name = "LTCBTCToolStripMenuItem2"
-        Me.LTCBTCToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.LTCBTCToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.LTCBTCToolStripMenuItem2.Text = "LTC/BTC"
         '
         'NMCUSDToolStripMenuItem2
         '
         Me.NMCUSDToolStripMenuItem2.Name = "NMCUSDToolStripMenuItem2"
-        Me.NMCUSDToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.NMCUSDToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.NMCUSDToolStripMenuItem2.Text = "NMC/USD"
         '
         'NMCBTCToolStripMenuItem2
         '
         Me.NMCBTCToolStripMenuItem2.Name = "NMCBTCToolStripMenuItem2"
-        Me.NMCBTCToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.NMCBTCToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.NMCBTCToolStripMenuItem2.Text = "NMC/BTC"
         '
         'NVCUSDToolStripMenuItem2
         '
         Me.NVCUSDToolStripMenuItem2.Name = "NVCUSDToolStripMenuItem2"
-        Me.NVCUSDToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.NVCUSDToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.NVCUSDToolStripMenuItem2.Text = "NVC/USD"
         '
         'NVCBTCToolStripMenuItem2
         '
         Me.NVCBTCToolStripMenuItem2.Name = "NVCBTCToolStripMenuItem2"
-        Me.NVCBTCToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.NVCBTCToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.NVCBTCToolStripMenuItem2.Text = "NVC/BTC"
         '
         'PPCUSDToolStripMenuItem1
         '
         Me.PPCUSDToolStripMenuItem1.Name = "PPCUSDToolStripMenuItem1"
-        Me.PPCUSDToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PPCUSDToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.PPCUSDToolStripMenuItem1.Text = "PPC/USD"
         '
         'PPCBTCToolStripMenuItem2
         '
         Me.PPCBTCToolStripMenuItem2.Name = "PPCBTCToolStripMenuItem2"
-        Me.PPCBTCToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.PPCBTCToolStripMenuItem2.Size = New System.Drawing.Size(129, 22)
         Me.PPCBTCToolStripMenuItem2.Text = "PPC/BTC"
         '
         'cmp3_btcchina
@@ -1171,12 +1221,12 @@ Partial Class Form1
         'cmp3_btcchinacny
         '
         Me.cmp3_btcchinacny.Name = "cmp3_btcchinacny"
-        Me.cmp3_btcchinacny.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_btcchinacny.Size = New System.Drawing.Size(125, 22)
         Me.cmp3_btcchinacny.Text = "BTC/CNY"
         '
         'cmp3_cryptsy
         '
-        Me.cmp3_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_cryptsybbqbtc, Me.cmp3_cryptsybtbbtc, Me.cmp3_cryptsycapbtc, Me.cmp3_cryptsy_crcbtc, Me.cmp3_cryptsy_elcbtc, Me.cmp3_cryptsy_frcbtc, Me.cmp3_cryptsy_frkbtc, Me.cmp3_cryptsy_ltcbtc, Me.cmp3_cryptsy_trcbtc, Me.cmp3_cryptsy_ptsbtc})
+        Me.cmp3_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_cryptsybbqbtc, Me.cmp3_cryptsybtbbtc, Me.cmp3_cryptsycapbtc, Me.cmp3_cryptsy_crcbtc, Me.cmp3_cryptsy_elcbtc, Me.cmp3_cryptsy_frcbtc, Me.cmp3_cryptsy_frkbtc, Me.cmp3_cryptsy_glxbtc, Me.cmp3_cryptsy_ltcbtc, Me.cmp3_cryptsy_trcbtc, Me.cmp3_cryptsy_ptsbtc, Me.cmp3_cryptsy_sbcbtc})
         Me.cmp3_cryptsy.Name = "cmp3_cryptsy"
         Me.cmp3_cryptsy.Size = New System.Drawing.Size(152, 22)
         Me.cmp3_cryptsy.Text = "cryptsy"
@@ -1199,6 +1249,48 @@ Partial Class Form1
         Me.cmp3_cryptsycapbtc.Size = New System.Drawing.Size(152, 22)
         Me.cmp3_cryptsycapbtc.Text = "CAP/BTC"
         '
+        'cmp3_cryptsy_crcbtc
+        '
+        Me.cmp3_cryptsy_crcbtc.Name = "cmp3_cryptsy_crcbtc"
+        Me.cmp3_cryptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_crcbtc.Text = "CRC/BTC"
+        '
+        'cmp3_cryptsy_elcbtc
+        '
+        Me.cmp3_cryptsy_elcbtc.Name = "cmp3_cryptsy_elcbtc"
+        Me.cmp3_cryptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_elcbtc.Text = "ELC/BTC"
+        '
+        'cmp3_cryptsy_frcbtc
+        '
+        Me.cmp3_cryptsy_frcbtc.Name = "cmp3_cryptsy_frcbtc"
+        Me.cmp3_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_frcbtc.Text = "FRC/BTC"
+        '
+        'cmp3_cryptsy_frkbtc
+        '
+        Me.cmp3_cryptsy_frkbtc.Name = "cmp3_cryptsy_frkbtc"
+        Me.cmp3_cryptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_frkbtc.Text = "FRK/BTC"
+        '
+        'cmp3_cryptsy_ltcbtc
+        '
+        Me.cmp3_cryptsy_ltcbtc.Name = "cmp3_cryptsy_ltcbtc"
+        Me.cmp3_cryptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_ltcbtc.Text = "LTC/BTC"
+        '
+        'cmp3_cryptsy_trcbtc
+        '
+        Me.cmp3_cryptsy_trcbtc.Name = "cmp3_cryptsy_trcbtc"
+        Me.cmp3_cryptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_trcbtc.Text = "TRC/BTC"
+        '
+        'cmp3_cryptsy_ptsbtc
+        '
+        Me.cmp3_cryptsy_ptsbtc.Name = "cmp3_cryptsy_ptsbtc"
+        Me.cmp3_cryptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_ptsbtc.Text = "PTS/BTC"
+        '
         'cmp3_kraken
         '
         Me.cmp3_kraken.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp3_kraken_btcusd, Me.cmp3_kraken_btceur, Me.cmp3_kraken_btcltc, Me.cmp3_kraken_ltcusd, Me.cmp3_kraken_ltceur})
@@ -1209,31 +1301,31 @@ Partial Class Form1
         'cmp3_kraken_btcusd
         '
         Me.cmp3_kraken_btcusd.Name = "cmp3_kraken_btcusd"
-        Me.cmp3_kraken_btcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_kraken_btcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_kraken_btcusd.Text = "BTC/USD"
         '
         'cmp3_kraken_btceur
         '
         Me.cmp3_kraken_btceur.Name = "cmp3_kraken_btceur"
-        Me.cmp3_kraken_btceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_kraken_btceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_kraken_btceur.Text = "BTC/EUR"
         '
         'cmp3_kraken_btcltc
         '
         Me.cmp3_kraken_btcltc.Name = "cmp3_kraken_btcltc"
-        Me.cmp3_kraken_btcltc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_kraken_btcltc.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_kraken_btcltc.Text = "BTC/LTC"
         '
         'cmp3_kraken_ltcusd
         '
         Me.cmp3_kraken_ltcusd.Name = "cmp3_kraken_ltcusd"
-        Me.cmp3_kraken_ltcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_kraken_ltcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_kraken_ltcusd.Text = "LTC/USD"
         '
         'cmp3_kraken_ltceur
         '
         Me.cmp3_kraken_ltceur.Name = "cmp3_kraken_ltceur"
-        Me.cmp3_kraken_ltceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_kraken_ltceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp3_kraken_ltceur.Text = "LTC/EUR"
         '
         'cm_panel3_close
@@ -1506,7 +1598,7 @@ Partial Class Form1
         '
         Me.cm_panel4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_market, Me.cm_panel4_close, Me.cmp4_alert, Me.cmp4_format})
         Me.cm_panel4.Name = "cm_panel1"
-        Me.cm_panel4.Size = New System.Drawing.Size(153, 114)
+        Me.cm_panel4.Size = New System.Drawing.Size(134, 92)
         '
         'cmp4_market
         '
@@ -1550,7 +1642,7 @@ Partial Class Form1
         'cmp4_bitstampusd
         '
         Me.cmp4_bitstampusd.Name = "cmp4_bitstampusd"
-        Me.cmp4_bitstampusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_bitstampusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_bitstampusd.Text = "BTC/USD"
         '
         'cmp4_btce
@@ -1641,7 +1733,7 @@ Partial Class Form1
         '
         'cmp4_cryptsy
         '
-        Me.cmp4_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_cryptsy_bbqbtc, Me.cmp4_cryptsy_btcbtc, Me.cmp4_cryptsy_capbtc, Me.cmp4_crptsy_crcbtc, Me.cmp4_crptsy_elcbtc, Me.cmp4_crptsy_frcbtc, Me.cmp4_crptsy_frkbtc, Me.cmp4_crptsy_ltcbtc, Me.cmp4_crptsy_trcbtc, Me.cmp4_crptsy_ptsbtc})
+        Me.cmp4_cryptsy.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_cryptsy_bbqbtc, Me.cmp4_cryptsy_btcbtc, Me.cmp4_cryptsy_capbtc, Me.cmp4_crptsy_crcbtc, Me.cmp4_crptsy_elcbtc, Me.cmp4_crptsy_frcbtc, Me.cmp4_crptsy_frkbtc, Me.cmp4_cryptsy_glxbtc, Me.cmp4_crptsy_ltcbtc, Me.cmp4_crptsy_trcbtc, Me.cmp4_crptsy_ptsbtc, Me.cmp4_cryptsy_sbcbtc})
         Me.cmp4_cryptsy.Name = "cmp4_cryptsy"
         Me.cmp4_cryptsy.Size = New System.Drawing.Size(152, 22)
         Me.cmp4_cryptsy.Text = "cryptsy"
@@ -1664,6 +1756,48 @@ Partial Class Form1
         Me.cmp4_cryptsy_capbtc.Size = New System.Drawing.Size(152, 22)
         Me.cmp4_cryptsy_capbtc.Text = "CAP/BTC"
         '
+        'cmp4_crptsy_crcbtc
+        '
+        Me.cmp4_crptsy_crcbtc.Name = "cmp4_crptsy_crcbtc"
+        Me.cmp4_crptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_crcbtc.Text = "CRC/BTC"
+        '
+        'cmp4_crptsy_elcbtc
+        '
+        Me.cmp4_crptsy_elcbtc.Name = "cmp4_crptsy_elcbtc"
+        Me.cmp4_crptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_elcbtc.Text = "ELC/BTC"
+        '
+        'cmp4_crptsy_frcbtc
+        '
+        Me.cmp4_crptsy_frcbtc.Name = "cmp4_crptsy_frcbtc"
+        Me.cmp4_crptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_frcbtc.Text = "FRC/BTC"
+        '
+        'cmp4_crptsy_frkbtc
+        '
+        Me.cmp4_crptsy_frkbtc.Name = "cmp4_crptsy_frkbtc"
+        Me.cmp4_crptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_frkbtc.Text = "FRK/BTC"
+        '
+        'cmp4_crptsy_ltcbtc
+        '
+        Me.cmp4_crptsy_ltcbtc.Name = "cmp4_crptsy_ltcbtc"
+        Me.cmp4_crptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_ltcbtc.Text = "LTC/BTC"
+        '
+        'cmp4_crptsy_trcbtc
+        '
+        Me.cmp4_crptsy_trcbtc.Name = "cmp4_crptsy_trcbtc"
+        Me.cmp4_crptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_trcbtc.Text = "TRC/BTC"
+        '
+        'cmp4_crptsy_ptsbtc
+        '
+        Me.cmp4_crptsy_ptsbtc.Name = "cmp4_crptsy_ptsbtc"
+        Me.cmp4_crptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_crptsy_ptsbtc.Text = "PTS/BTC"
+        '
         'cmp4_kraken
         '
         Me.cmp4_kraken.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmp4_kraken_btcusd, Me.cmp4_kraken_btceur, Me.cmp4_kraken_btcltc, Me.cmp4_kraken_ltcusd, Me.cmp4_kraken_ltceur})
@@ -1674,50 +1808,50 @@ Partial Class Form1
         'cmp4_kraken_btcusd
         '
         Me.cmp4_kraken_btcusd.Name = "cmp4_kraken_btcusd"
-        Me.cmp4_kraken_btcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_kraken_btcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_kraken_btcusd.Text = "BTC/USD"
         '
         'cmp4_kraken_btceur
         '
         Me.cmp4_kraken_btceur.Name = "cmp4_kraken_btceur"
-        Me.cmp4_kraken_btceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_kraken_btceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_kraken_btceur.Text = "BTC/EUR"
         '
         'cmp4_kraken_btcltc
         '
         Me.cmp4_kraken_btcltc.Name = "cmp4_kraken_btcltc"
-        Me.cmp4_kraken_btcltc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_kraken_btcltc.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_kraken_btcltc.Text = "BTC/LTC"
         '
         'cmp4_kraken_ltcusd
         '
         Me.cmp4_kraken_ltcusd.Name = "cmp4_kraken_ltcusd"
-        Me.cmp4_kraken_ltcusd.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_kraken_ltcusd.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_kraken_ltcusd.Text = "LTC/USD"
         '
         'cmp4_kraken_ltceur
         '
         Me.cmp4_kraken_ltceur.Name = "cmp4_kraken_ltceur"
-        Me.cmp4_kraken_ltceur.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_kraken_ltceur.Size = New System.Drawing.Size(123, 22)
         Me.cmp4_kraken_ltceur.Text = "LTC/EUR"
         '
         'cm_panel4_close
         '
         Me.cm_panel4_close.Name = "cm_panel4_close"
-        Me.cm_panel4_close.Size = New System.Drawing.Size(133, 22)
+        Me.cm_panel4_close.Size = New System.Drawing.Size(152, 22)
         Me.cm_panel4_close.Text = "close panel"
         '
         'cmp4_alert
         '
         Me.cmp4_alert.Name = "cmp4_alert"
-        Me.cmp4_alert.Size = New System.Drawing.Size(133, 22)
+        Me.cmp4_alert.Size = New System.Drawing.Size(152, 22)
         Me.cmp4_alert.Text = "alert"
         '
         'cmp4_format
         '
         Me.cmp4_format.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem39, Me.ToolStripMenuItem40, Me.ToolStripMenuItem41, Me.ToolStripMenuItem43, Me.ToolStripMenuItem42, Me.ToolStripMenuItem44, Me.ToolStripMenuItem9})
         Me.cmp4_format.Name = "cmp4_format"
-        Me.cmp4_format.Size = New System.Drawing.Size(133, 22)
+        Me.cmp4_format.Size = New System.Drawing.Size(152, 22)
         Me.cmp4_format.Text = "format"
         '
         'ToolStripMenuItem39
@@ -1842,131 +1976,53 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "btcmon"
         Me.NotifyIcon1.Visible = True
         '
-        'cmp2_cryptsy_crcbtc
+        'cmp1_cryptsy_glxbtc
         '
-        Me.cmp2_cryptsy_crcbtc.Name = "cmp2_cryptsy_crcbtc"
-        Me.cmp2_cryptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_crcbtc.Text = "CRC/BTC"
+        Me.cmp1_cryptsy_glxbtc.Name = "cmp1_cryptsy_glxbtc"
+        Me.cmp1_cryptsy_glxbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp1_cryptsy_glxbtc.Text = "GLX/BTC"
         '
-        'cmp2_cryptsy_elcbtc
+        'cmp1_cryptsy_sbcbtc
         '
-        Me.cmp2_cryptsy_elcbtc.Name = "cmp2_cryptsy_elcbtc"
-        Me.cmp2_cryptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_elcbtc.Text = "ELC/BTC"
+        Me.cmp1_cryptsy_sbcbtc.Name = "cmp1_cryptsy_sbcbtc"
+        Me.cmp1_cryptsy_sbcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp1_cryptsy_sbcbtc.Text = "SBC/BTC"
         '
-        'cmp2_cryptsy_frcbtc
+        'cmp2_cryptsy_glxbtc
         '
-        Me.cmp2_cryptsy_frcbtc.Name = "cmp2_cryptsy_frcbtc"
-        Me.cmp2_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_frcbtc.Text = "FRC/BTC"
+        Me.cmp2_cryptsy_glxbtc.Name = "cmp2_cryptsy_glxbtc"
+        Me.cmp2_cryptsy_glxbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_glxbtc.Text = "GLX/BTC"
         '
-        'cmp2_cryptsy_frkbtc
+        'cmp2_cryptsy_sbcbtc
         '
-        Me.cmp2_cryptsy_frkbtc.Name = "cmp2_cryptsy_frkbtc"
-        Me.cmp2_cryptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_frkbtc.Text = "FRK/BTC"
+        Me.cmp2_cryptsy_sbcbtc.Name = "cmp2_cryptsy_sbcbtc"
+        Me.cmp2_cryptsy_sbcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp2_cryptsy_sbcbtc.Text = "SBC/BTC"
         '
-        'cmp2_cryptsy_ltcbtc
+        'cmp3_cryptsy_glxbtc
         '
-        Me.cmp2_cryptsy_ltcbtc.Name = "cmp2_cryptsy_ltcbtc"
-        Me.cmp2_cryptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_ltcbtc.Text = "LTC/BTC"
+        Me.cmp3_cryptsy_glxbtc.Name = "cmp3_cryptsy_glxbtc"
+        Me.cmp3_cryptsy_glxbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_glxbtc.Text = "GLX/BTC"
         '
-        'cmp2_cryptsy_trcbtc
+        'cmp3_cryptsy_sbcbtc
         '
-        Me.cmp2_cryptsy_trcbtc.Name = "cmp2_cryptsy_trcbtc"
-        Me.cmp2_cryptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_trcbtc.Text = "TRC/BTC"
+        Me.cmp3_cryptsy_sbcbtc.Name = "cmp3_cryptsy_sbcbtc"
+        Me.cmp3_cryptsy_sbcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp3_cryptsy_sbcbtc.Text = "SBC/BTC"
         '
-        'cmp2_cryptsy_ptsbtc
+        'cmp4_cryptsy_glxbtc
         '
-        Me.cmp2_cryptsy_ptsbtc.Name = "cmp2_cryptsy_ptsbtc"
-        Me.cmp2_cryptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp2_cryptsy_ptsbtc.Text = "PTS/BTC"
+        Me.cmp4_cryptsy_glxbtc.Name = "cmp4_cryptsy_glxbtc"
+        Me.cmp4_cryptsy_glxbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_cryptsy_glxbtc.Text = "GLX/BTC"
         '
-        'cmp3_cryptsy_crcbtc
+        'cmp4_cryptsy_sbcbtc
         '
-        Me.cmp3_cryptsy_crcbtc.Name = "cmp3_cryptsy_crcbtc"
-        Me.cmp3_cryptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_crcbtc.Text = "CRC/BTC"
-        '
-        'cmp3_cryptsy_elcbtc
-        '
-        Me.cmp3_cryptsy_elcbtc.Name = "cmp3_cryptsy_elcbtc"
-        Me.cmp3_cryptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_elcbtc.Text = "ELC/BTC"
-        '
-        'cmp3_cryptsy_frcbtc
-        '
-        Me.cmp3_cryptsy_frcbtc.Name = "cmp3_cryptsy_frcbtc"
-        Me.cmp3_cryptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_frcbtc.Text = "FRC/BTC"
-        '
-        'cmp3_cryptsy_frkbtc
-        '
-        Me.cmp3_cryptsy_frkbtc.Name = "cmp3_cryptsy_frkbtc"
-        Me.cmp3_cryptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_frkbtc.Text = "FRK/BTC"
-        '
-        'cmp3_cryptsy_ltcbtc
-        '
-        Me.cmp3_cryptsy_ltcbtc.Name = "cmp3_cryptsy_ltcbtc"
-        Me.cmp3_cryptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_ltcbtc.Text = "LTC/BTC"
-        '
-        'cmp3_cryptsy_trcbtc
-        '
-        Me.cmp3_cryptsy_trcbtc.Name = "cmp3_cryptsy_trcbtc"
-        Me.cmp3_cryptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_trcbtc.Text = "TRC/BTC"
-        '
-        'cmp3_cryptsy_ptsbtc
-        '
-        Me.cmp3_cryptsy_ptsbtc.Name = "cmp3_cryptsy_ptsbtc"
-        Me.cmp3_cryptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp3_cryptsy_ptsbtc.Text = "PTS/BTC"
-        '
-        'cmp4_crptsy_crcbtc
-        '
-        Me.cmp4_crptsy_crcbtc.Name = "cmp4_crptsy_crcbtc"
-        Me.cmp4_crptsy_crcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_crcbtc.Text = "CRC/BTC"
-        '
-        'cmp4_crptsy_elcbtc
-        '
-        Me.cmp4_crptsy_elcbtc.Name = "cmp4_crptsy_elcbtc"
-        Me.cmp4_crptsy_elcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_elcbtc.Text = "ELC/BTC"
-        '
-        'cmp4_crptsy_frcbtc
-        '
-        Me.cmp4_crptsy_frcbtc.Name = "cmp4_crptsy_frcbtc"
-        Me.cmp4_crptsy_frcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_frcbtc.Text = "FRC/BTC"
-        '
-        'cmp4_crptsy_frkbtc
-        '
-        Me.cmp4_crptsy_frkbtc.Name = "cmp4_crptsy_frkbtc"
-        Me.cmp4_crptsy_frkbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_frkbtc.Text = "FRK/BTC"
-        '
-        'cmp4_crptsy_ltcbtc
-        '
-        Me.cmp4_crptsy_ltcbtc.Name = "cmp4_crptsy_ltcbtc"
-        Me.cmp4_crptsy_ltcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_ltcbtc.Text = "LTC/BTC"
-        '
-        'cmp4_crptsy_ptsbtc
-        '
-        Me.cmp4_crptsy_ptsbtc.Name = "cmp4_crptsy_ptsbtc"
-        Me.cmp4_crptsy_ptsbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_ptsbtc.Text = "PTS/BTC"
-        '
-        'cmp4_crptsy_trcbtc
-        '
-        Me.cmp4_crptsy_trcbtc.Name = "cmp4_crptsy_trcbtc"
-        Me.cmp4_crptsy_trcbtc.Size = New System.Drawing.Size(152, 22)
-        Me.cmp4_crptsy_trcbtc.Text = "TRC/BTC"
+        Me.cmp4_cryptsy_sbcbtc.Name = "cmp4_cryptsy_sbcbtc"
+        Me.cmp4_cryptsy_sbcbtc.Size = New System.Drawing.Size(152, 22)
+        Me.cmp4_cryptsy_sbcbtc.Text = "SBC/BTC"
         '
         'Form1
         '
@@ -2255,5 +2311,13 @@ Partial Class Form1
     Friend WithEvents cmp4_crptsy_ltcbtc As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents cmp4_crptsy_trcbtc As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents cmp4_crptsy_ptsbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp1_cryptsy_glxbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp1_cryptsy_sbcbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp2_cryptsy_glxbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp2_cryptsy_sbcbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp3_cryptsy_glxbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp3_cryptsy_sbcbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp4_cryptsy_glxbtc As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cmp4_cryptsy_sbcbtc As System.Windows.Forms.ToolStripMenuItem
 
 End Class

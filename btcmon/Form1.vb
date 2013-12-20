@@ -37,6 +37,9 @@ Public Class Form1
     Dim url_cryptsybtcltc As String = "http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=3"
     Dim url_cryptsybtctrc As String = "http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=27"
     Dim url_cryptsybtcpts As String = "http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=119"
+    Dim url_cryptsybtcglx As String = "http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=78"
+    Dim url_cryptsybtcsbc As String = "http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=51"
+
     Dim align As Integer = 0 '0=4x1  1=1x4 2=2x2
 
 
@@ -148,8 +151,7 @@ Public Class Form1
         If p4.alert_set Then rb_p4_alertonoff.BackColor = Color.Red
         NotifyIcon1.Visible = False
         main_redraw()
-
-
+  
     End Sub
 
     Private Sub p1USDToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -211,7 +213,7 @@ Public Class Form1
     End Sub
    
     
-   
+ 
  
     
    
@@ -1426,5 +1428,53 @@ p5:
         set_market(p4, "BTC", "cryptsy", "PTS", url_cryptsybtcpts)
         alert_off(4)
         panel_update(p4, 4)
+    End Sub
+
+    Private Sub cmp1_cryptsy_glxbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp1_cryptsy_glxbtc.Click
+        set_market(p1, "BTC", "cryptsy", "GLX", url_cryptsybtcglx)
+        alert_off(1)
+        panel_update(p1, 1)
+    End Sub
+
+    Private Sub cmp1_cryptsy_sbcbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp1_cryptsy_sbcbtc.Click
+        set_market(p1, "BTC", "cryptsy", "SBC", url_cryptsybtcsbc)
+        alert_off(1)
+        panel_update(p1, 1)
+    End Sub
+
+    Private Sub cmp2_cryptsy_glxbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_cryptsy_glxbtc.Click
+        set_market(p2, "BTC", "cryptsy", "GLX", url_cryptsybtcglx)
+        alert_off(2)
+        panel_update(p2, 2)
+    End Sub
+
+    Private Sub cmp2_cryptsy_sbcbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp2_cryptsy_sbcbtc.Click
+        set_market(p2, "BTC", "cryptsy", "SBC", url_cryptsybtcsbc)
+        alert_off(2)
+        panel_update(p2, 2)
+    End Sub
+
+    Private Sub cmp4_cryptsy_glxbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp4_cryptsy_glxbtc.Click
+        set_market(p4, "BTC", "cryptsy", "GLX", url_cryptsybtcglx)
+        alert_off(4)
+        panel_update(p4, 4)
+    End Sub
+
+    Private Sub cmp4_cryptsy_sbcbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp4_cryptsy_sbcbtc.Click
+        set_market(p4, "BTC", "cryptsy", "SBC", url_cryptsybtcsbc)
+        alert_off(4)
+        panel_update(p4, 4)
+    End Sub
+
+    Private Sub cmp3_cryptsy_sbcbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_cryptsy_sbcbtc.Click
+        set_market(p3, "BTC", "cryptsy", "SBC", url_cryptsybtcsbc)
+        alert_off(3)
+        panel_update(p3, 3)
+    End Sub
+
+    Private Sub cmp3_cryptsy_glxbtc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmp3_cryptsy_glxbtc.Click
+        set_market(p3, "BTC", "cryptsy", "GLX", url_cryptsybtcglx)
+        alert_off(3)
+        panel_update(p3, 3)
     End Sub
 End Class
